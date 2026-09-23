@@ -23,8 +23,9 @@ COPY package.json tsconfig.json ./
 COPY src/ts ./src/ts
 COPY web ./web
 COPY --from=train /app/assets ./assets
-# 开发依赖仅用于把 TS 编译成 dist（运行期不加载任何 npm 包）
-RUN npm install --ignore-scripts \
+# 开发依赖仅用于把 TS 编译成 dist（运行期不加载任何 npm 包）。
+# NODE_ENV=production 会让 npm 跳过 devDependencies，故显式 --include=dev。
+RUN npm install --ignore-scripts --include=dev \
  && ./node_modules/.bin/tsc -p tsconfig.json \
  && rm -rf node_modules src/ts
 EXPOSE 8787
