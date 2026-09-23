@@ -1,5 +1,12 @@
 # hyperion-ai
 
+<p align="center">
+  <a href="https://github.com/CJX0712/hyperion-ai/actions/workflows/ci.yml"><img src="https://github.com/CJX0712/hyperion-ai/actions/workflows/ci.yml/badge.svg" alt="ci"></a>
+  <a href="https://github.com/CJX0712/hyperion-ai/releases"><img src="https://img.shields.io/github/v/release/CJX0712/hyperion-ai?sort=semver" alt="release"></a>
+  <a href="https://github.com/CJX0712/hyperion-ai/blob/main/LICENSE"><img src="https://img.shields.io/github/license/CJX0712/hyperion-ai" alt="license"></a>
+  <img src="https://img.shields.io/badge/author-%E6%99%A8%E6%98%9F-1f6feb" alt="author">
+</p>
+
 **双引擎端到端可复现 AI 系统**：Python(numpy) 训练内核 + TypeScript 零运行期依赖推理编排内核。
 
 作者：晨星（CJX0712） · License: MIT
