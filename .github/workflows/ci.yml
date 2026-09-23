@@ -1,0 +1,44 @@
+# CI：每次 push / PR 跑全量验收（训练 + 构建 + 自检 + e2e + P0 扫描）
+# 作者：晨星
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 安装训练内核依赖
+        run: pip install -r requirements.txt
+
+      - name: 安装构建依赖（精确版本）
+        run: npm install --ignore-scripts
+
+      - name: 训练（确定性种子 20260923）
+        run: |
+          PYTHONPATH=src/py OPENBLAS_NUM_THREADS=2 \
+            python -m hyperion.train --out assets
+
+      - name: 全量验收
+        run: npm run verify
+
+      - name: 上传训练报告
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: train-report
+          path: assets/train-report.json
+          if-no-files-found: ignore

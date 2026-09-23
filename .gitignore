@@ -1,0 +1,9 @@
+node_modules/
+dist/
+venv/
+assets/*.hwm
+assets/train-report.json
+logs/
+__pycache__/
+*.pyc
+.DS_Store

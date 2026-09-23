@@ -1,0 +1,24 @@
+{
+  "name": "hyperion-ai",
+  "version": "0.1.0",
+  "description": "Hyperion AI - 双引擎端到端可复现 AI 系统：Python(numpy) 训练内核 + TypeScript 零依赖推理编排内核",
+  "author": "晨星",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --experimental-transform-types src/ts/selfcheck.ts",
+    "e2e": "node scripts/e2e.mjs",
+    "scan:p0": "node scripts/scan-p0.mjs",
+    "verify": "npm run build && npm run test && npm run e2e && npm run scan:p0",
+    "start": "node dist/main.js",
+    "train": "node scripts/train.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "22.18.8",
+    "typescript": "5.9.3"
+  }
+}

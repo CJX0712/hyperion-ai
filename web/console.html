@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hyperion AI 控制台</title>
+<!--
+  Hyperion AI 单文件控制台
+  作者：晨星
+  设计 token：主色 #0D6E7E / 强调 #0E7490，浅色优先，SVG sprite 图标，零外部请求
+-->
+<style>
+  :root {
+    --primary: #0d6e7e;
+    --accent: #0e7490;
+    --primary-strong: #0a5561;
+    --bg: #f6f8f9;
+    --surface: #ffffff;
+    --surface-2: #eef3f4;
+    --border: #d8e2e5;
+    --text: #1c2b2f;
+    --text-2: #5b6f75;
+    --ok: #15803d;
+    --warn: #b45309;
+    --danger: #b91c1c;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(28, 43, 47, .08), 0 4px 14px rgba(28, 43, 47, .06);
+    --mono: ui-monospace, Consolas, "Cascadia Mono", monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    background: var(--bg); color: var(--text); font-size: 14px;
+    display: flex; overflow: hidden;
+  }
+  .icon { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+  /* ---- 侧栏 ---- */
+  aside {
+    width: 220px; background: var(--primary-strong); color: #e7f1f3;
+    display: flex; flex-direction: column; flex: none;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; padding: 20px 18px 14px; }
+  .brand .logo { width: 30px; height: 30px; border-radius: 8px; background: var(--accent); display: grid; place-items: center; color: #fff; }
+  .brand b { font-size: 16px; letter-spacing: .5px; }
+  .brand small { display: block; color: #9fc3cb; font-weight: 400; font-size: 11px; }
+  nav { padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+  nav button {
+    display: flex; align-items: center; gap: 10px; width: 100%;
+    padding: 10px 12px; border: 0; border-radius: 8px; cursor: pointer;
+    background: transparent; color: #cfe3e7; font-size: 14px; text-align: left; font-family: inherit;
+  }
+  nav button:hover { background: rgba(255,255,255,.08); }
+  nav button.on { background: var(--accent); color: #fff; }
+  .side-foot { margin-top: auto; padding: 14px 18px; font-size: 11px; color: #8fb4bc; border-top: 1px solid rgba(255,255,255,.1); line-height: 1.8; }
+  .side-foot .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #6b7280; margin-right: 6px; }
+  .side-foot .dot.ok { background: #4ade80; }
+
+  /* ---- 主区 ---- */
+  main { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+  header {
+    height: 52px; background: var(--surface); border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 12px; padding: 0 20px; flex: none;
+  }
+  header h1 { font-size: 15px; font-weight: 600; }
+  header .sub { color: var(--text-2); font-size: 12px; }
+  .view { flex: 1; overflow: auto; padding: 20px; display: none; }
+  .view.on { display: block; }
+
+  /* ---- 卡片与通用 ---- */
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+  .card + .card { margin-top: 14px; }
+  .card .hd { padding: 12px 16px; border-bottom: 1px solid var(--border); font-weight: 600; display: flex; align-items: center; gap: 8px; }
+  .card .bd { padding: 14px 16px; }
+  .row { display: flex; gap: 10px; }
+  input[type=text], textarea {
+    width: 100%; border: 1px solid var(--border); border-radius: 8px; padding: 9px 12px;
+    font: inherit; color: var(--text); background: var(--surface); outline: none; resize: vertical;
+  }
+  input[type=text]:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(14,116,144,.12); }
+  .btn {
+    display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; border-radius: 8px;
+    border: 0; background: var(--primary); color: #fff; font: inherit; cursor: pointer; flex: none;
+  }
+  .btn:hover { background: var(--accent); }
+  .btn:disabled { opacity: .5; cursor: default; }
+  .btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--border); }
+  .btn.ghost:hover { background: var(--surface-2); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 99px; font-size: 11px; background: var(--surface-2); color: var(--text-2); }
+  .tag.ok { background: #dcfce7; color: var(--ok); }
+  .tag.warn { background: #fef3c7; color: var(--warn); }
+  .mono { font-family: var(--mono); font-size: 12.5px; }
+  .muted { color: var(--text-2); }
+
+  /* ---- 状态五态 ---- */
+  .state { text-align: center; padding: 40px 0; color: var(--text-2); }
+  .state .icon { width: 34px; height: 34px; margin-bottom: 8px; opacity: .5; }
+  .state.hide { display: none; }
+  .spin { animation: rot 1.1s linear infinite; }
+  @keyframes rot { to { transform: rotate(360deg); } }
+
+  /* ---- 对话视图 ---- */
+  .chat-wrap { max-width: 860px; margin: 0 auto; }
+  .msg { display: flex; gap: 10px; margin-bottom: 16px; }
+  .msg .avatar { width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; flex: none; color: #fff; }
+  .msg.user .avatar { background: #64748b; }
+  .msg.bot .avatar { background: var(--accent); }
+  .msg .bubble { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; flex: 1; min-width: 0; box-shadow: var(--shadow); }
+  .msg .meta { font-size: 11px; color: var(--text-2); margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .cites { margin-top: 8px; border-top: 1px dashed var(--border); padding-top: 8px; }
+  .cites .cite { font-size: 12px; color: var(--text-2); padding: 3px 0; }
+  .cites .cite b { color: var(--accent); font-weight: 600; }
+  .composer { position: sticky; bottom: 0; padding-top: 10px; }
+  .composer .bar { display: flex; gap: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px; box-shadow: var(--shadow); }
+  .composer textarea { min-height: 44px; border: 0; box-shadow: none; background: transparent; }
+
+  /* ---- 知识库视图 ---- */
+  .hit { border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; margin-top: 8px; }
+  .hit .top { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+  .hit .rank { background: var(--accent); color: #fff; border-radius: 6px; font-size: 11px; padding: 1px 7px; }
+  .hit .score { font-family: var(--mono); font-size: 11px; color: var(--text-2); }
+  .hit .txt { font-size: 13px; line-height: 1.7; color: var(--text); }
+
+  /* ---- 追踪视图 ---- */
+  .evt { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px dashed var(--border); font-size: 13px; }
+  .evt:last-child { border-bottom: 0; }
+  .evt .k { width: 76px; flex: none; }
+  .evt .k.plan { color: var(--accent); } .evt .k.obs { color: var(--ok); }
+  .evt .k.crit { color: var(--warn); } .evt .k.final { color: var(--primary); }
+
+  /* ---- 评估视图 ---- */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  th { color: var(--text-2); font-weight: 500; font-size: 12px; background: var(--surface-2); }
+  td.num { font-family: var(--mono); }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } }
+
+  /* ---- 健康视图 ---- */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+  .stat { border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; background: var(--surface); }
+  .stat .v { font-size: 22px; font-weight: 600; font-family: var(--mono); }
+  .stat .l { font-size: 12px; color: var(--text-2); margin-top: 4px; }
+  pre.log { background: #10272c; color: #cde7ec; border-radius: var(--radius); padding: 14px; font-family: var(--mono); font-size: 12px; overflow: auto; max-height: 300px; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-logo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H4l2.2-3.3A8 8 0 1 1 21 12z"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3 3.7-3.7z"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2.5-6 4 12L16 12h5"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2 15 22l-4-9-9-4 20-7z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-5.5 8-5.5s6.5 1.5 8 5.5"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3zM12 10v4M12 17.5v.5"/></symbol>
+  </defs>
+</svg>
+
+<aside>
+  <div class="brand">
+    <span class="logo"><svg class="icon"><use href="#i-logo"/></svg></span>
+    <div><b>Hyperion AI</b><small>本地知识引擎</small></div>
+  </div>
+  <nav id="nav">
+    <button data-v="chat" class="on"><svg class="icon"><use href="#i-chat"/></svg>对话问答</button>
+    <button data-v="kb"><svg class="icon"><use href="#i-db"/></svg>知识库检索</button>
+    <button data-v="trace"><svg class="icon"><use href="#i-tool"/></svg>工具与追踪</button>
+    <button data-v="eval"><svg class="icon"><use href="#i-chart"/></svg>评估</button>
+    <button data-v="health"><svg class="icon"><use href="#i-pulse"/></svg>健康</button>
+  </nav>
+  <div class="side-foot">
+    <span class="dot" id="hdot"></span><span id="hlabel">连接中……</span><br>
+    运行期第三方依赖 0<br>
+    作者 晨星
+  </div>
+</aside>
+
+<main>
+  <header>
+    <h1 id="vtitle">对话问答</h1>
+    <span class="sub" id="vsub">基于本地知识库的检索增强问答</span>
+  </header>
+
+  <!-- 对话 -->
+  <section class="view on" id="v-chat">
+    <div class="chat-wrap">
+      <div id="chatlog">
+        <div class="state" id="chat-empty">
+          <svg class="icon"><use href="#i-chat"/></svg>
+          <p>向 Hyperion 提一个知识库相关的问题，例如「服务怎么重启」「巡检时间是什么时候」</p>
+        </div>
+      </div>
+      <div class="composer">
+        <div class="bar">
+          <textarea id="chat-input" placeholder="输入问题，回车发送（Shift+回车换行）"></textarea>
+          <button class="btn" id="chat-send"><svg class="icon"><use href="#i-send"/></svg>发送</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 知识库 -->
+  <section class="view" id="v-kb">
+    <div class="chat-wrap">
+      <div class="card">
+        <div class="hd"><svg class="icon"><use href="#i-search"/></svg>混合检索（稠密 + BM25 + RRF 融合 + 重排护栏）</div>
+        <div class="bd">
+          <div class="row">
+            <input type="text" id="kb-q" placeholder="输入检索词，例如：日志级别 设置">
+            <button class="btn" id="kb-go">检索</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="hd">结果 <span class="tag" id="kb-meta"></span></div>
+        <div class="bd" id="kb-out"><div class="state"><p>尚未检索</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 追踪 -->
+  <section class="view" id="v-trace">
+    <div class="chat-wrap">
+      <div class="card">
+        <div class="hd"><svg class="icon"><use href="#i-tool"/></svg>Agent 任务（计划 - 执行 - 观测 - 批判，有界循环）</div>
+        <div class="bd">
+          <div class="row">
+            <input type="text" id="tr-q" placeholder="输入任务，例如：计算 12*3，或：数据库什么时候备份">
+            <button class="btn" id="tr-go">执行</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="hd">执行轨迹 <span class="tag" id="tr-meta"></span></div>
+        <div class="bd" id="tr-out"><div class="state"><p>尚未执行</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 评估 -->
+  <section class="view" id="v-eval">
+    <div class="chat-wrap">
+      <div class="card">
+        <div class="hd"><svg class="icon"><use href="#i-chart"/></svg>检索与生成质量
+          <span style="margin-left:auto" class="row"><button class="btn ghost" id="ev-go">运行评估</button></span>
+        </div>
+        <div class="bd" id="ev-out">
+          <div class="state"><p>点击「运行评估」：全新索引上跑完整 QA 集，指标含召回率 / MRR / 重排护栏 / 生成忠实度</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 健康 -->
+  <section class="view" id="v-health">
+    <div class="chat-wrap">
+      <div class="stats" id="hl-stats"></div>
+      <div class="card">
+        <div class="hd">运行日志 <span style="margin-left:auto" class="row"><button class="btn ghost" id="hl-refresh">刷新</button></span></div>
+        <div class="bd"><pre class="log" id="hl-log">等待数据……</pre></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+"use strict";
+// ---- 工具 ----
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+async function api(path, body, method) {
+  const r = await fetch(path, body === undefined ? { method: method || "GET" } : {
+    method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body),
+  });
+  const j = await r.json();
+  if (!r.ok) throw new Error((j.error && j.error.message) || ("HTTP " + r.status));
+  return j;
+}
+function humanTime(sec) {
+  if (sec < 60) return Math.round(sec) + " 秒";
+  if (sec < 3600) return Math.round(sec / 60) + " 分钟";
+  return Math.round(sec / 3600) + " 小时";
+}
+
+// ---- 导航 ----
+const titles = { chat: ["对话问答", "基于本地知识库的检索增强问答"], kb: ["知识库检索", "稠密向量 + BM25 混合召回，RRF 融合，重排护栏"], trace: ["工具与追踪", "Agent 循环：计划、执行、观测、批判"], eval: ["评估", "全新索引上的机械验收指标"], health: ["健康", "服务与模型运行状态"] };
+document.querySelectorAll("#nav button").forEach((b) => b.addEventListener("click", () => {
+  document.querySelectorAll("#nav button").forEach((x) => x.classList.remove("on"));
+  document.querySelectorAll(".view").forEach((x) => x.classList.remove("on"));
+  b.classList.add("on");
+  const v = b.dataset.v;
+  $("v-" + v).classList.add("on");
+  $("vtitle").textContent = titles[v][0];
+  $("vsub").textContent = titles[v][1];
+}));
+
+// ---- 健康 ----
+let healthCache = null;
+async function refreshHealth(silent) {
+  try {
+    const h = await api("/api/v1/health");
+    healthCache = h;
+    $("hdot").className = "dot ok";
+    $("hlabel").textContent = "运行中 · 索引 " + h.index.chunks + " 片";
+    const a = h.model.arch || {};
+    const items = [
+      [h.index.chunks, "索引分片"],
+      [a.d_model + " x " + a.n_layers, "模型 d_model x 层数"],
+      [a.vocab_size, "词表大小"],
+      [h.model.dtype === "i8" ? "int8" : h.model.dtype, "权重量化"],
+      [h.model.embedDim, "嵌入维度"],
+      [humanTime(h.uptimeSec), "运行时长"],
+    ];
+    $("hl-stats").innerHTML = items.map((it) =>
+      '<div class="stat"><div class="v">' + esc(it[0]) + '</div><div class="l">' + esc(it[1]) + '</div></div>').join("");
+    $("hl-log").textContent = JSON.stringify(h, null, 2);
+  } catch (e) {
+    $("hdot").className = "dot";
+    $("hlabel").textContent = "服务不可达";
+    if (!silent) $("hl-log").textContent = "健康检查失败：" + e.message;
+  }
+}
+$("hl-refresh").addEventListener("click", () => refreshHealth(false));
+refreshHealth(true);
+setInterval(() => refreshHealth(true), 15000);
+
+// ---- 对话 ----
+function addMsg(role, html) {
+  const el = document.createElement("div");
+  el.className = "msg " + role;
+  el.innerHTML = '<div class="avatar"><svg class="icon"><use href="#i-' + (role === "user" ? "user" : "logo") + '"/></svg></div>'
+    + '<div class="bubble">' + html + "</div>";
+  $("chatlog").appendChild(el);
+  $("v-chat").scrollTop = 1e9;
+  return el;
+}
+let chatting = false;
+async function ask() {
+  const q = $("chat-input").value.trim();
+  if (!q || chatting) return;
+  chatting = true;
+  $("chat-send").disabled = true;
+  $("chat-input").value = "";
+  $("chat-empty").classList.add("hide");
+  addMsg("user", esc(q));
+  const bot = addMsg("bot", '<div class="state"><svg class="icon spin"><use href="#i-logo"/></svg><p>检索知识库并生成回答……</p></div>');
+  const t0 = performance.now();
+  try {
+    const r = await api("/api/v1/rag/answer", { query: q });
+    const cites = r.citations.map((c) =>
+      '<div class="cite">[' + c.rank + "] <b>" + esc(c.docId) + "</b> " + esc(c.title) + ' <span class="mono">' + c.score.toFixed(4) + "</span></div>").join("");
+    bot.querySelector(".bubble").innerHTML =
+      esc(r.answer)
+      + (cites ? '<div class="cites"><div class="muted" style="font-size:11px;margin-bottom:2px">引用来源</div>' + cites + "</div>" : "")
+      + '<div class="meta"><span class="tag ' + (r.mode === "generative" ? "ok" : "warn") + '">' + (r.mode === "generative" ? "生成" : "抽取") + "</span>"
+      + '<span class="mono">' + r.tokensPerSecond + " tok/s</span><span class='mono'>" + Math.round(r.latencyMs) + " ms</span></div>";
+  } catch (e) {
+    bot.querySelector(".bubble").innerHTML = '<span style="color:var(--danger)">' + esc(e.message) + "</span>";
+  }
+  const secs = (performance.now() - t0) / 1000;
+  void secs;
+  chatting = false;
+  $("chat-send").disabled = false;
+  $("v-chat").scrollTop = 1e9;
+}
+$("chat-send").addEventListener("click", ask);
+$("chat-input").addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); ask(); }
+});
+
+// ---- 知识库 ----
+async function kbSearch() {
+  const q = $("kb-q").value.trim();
+  if (!q) return;
+  $("kb-out").innerHTML = '<div class="state"><svg class="icon spin"><use href="#i-search"/></svg><p>检索中……</p></div>';
+  try {
+    const r = await api("/api/v1/rag/query", { query: q });
+    $("kb-meta").textContent = r.hits.length + " 条 · " + r.retrievalMs + " ms";
+    $("kb-out").innerHTML = r.hits.length === 0
+      ? '<div class="state"><svg class="icon"><use href="#i-warn"/></svg><p>未检索到相关内容</p></div>'
+      : r.hits.map((h) =>
+        '<div class="hit"><div class="top"><span class="rank">' + h.rank + "</span><b>" + esc(h.docId) + "</b>"
+        + '<span class="muted">' + esc(h.title) + '</span><span class="score">score ' + h.score.toFixed(4) + "</span></div>"
+        + '<div class="txt">' + esc(h.text) + "</div></div>").join("");
+  } catch (e) {
+    $("kb-out").innerHTML = '<div class="state" style="color:var(--danger)"><p>' + esc(e.message) + "</p></div>";
+  }
+}
+$("kb-go").addEventListener("click", kbSearch);
+$("kb-q").addEventListener("keydown", (e) => { if (e.key === "Enter") kbSearch(); });
+
+// ---- 追踪 ----
+const evtName = { plan: "计划", step: "执行", observation: "观测", critique: "批判", final: "结论" };
+const evtClass = { plan: "plan", step: "step", observation: "obs", critique: "crit", final: "final" };
+async function trace() {
+  const task = $("tr-q").value.trim();
+  if (!task) return;
+  $("tr-out").innerHTML = '<div class="state"><svg class="icon spin"><use href="#i-tool"/></svg><p>执行中……</p></div>';
+  try {
+    const r = await api("/api/v1/agent/run", { task, maxSteps: 4 });
+    $("tr-meta").textContent = r.steps + " 步 · " + (r.stoppedBy === "no_tool" ? "无更多工具" : "达到步数上限");
+    $("tr-out").innerHTML = r.events.map((e) =>
+      '<div class="evt"><span class="k ' + (evtClass[e.type] || "") + '">[' + (evtName[e.type] || e.type) + (e.step ? " " + e.step : "") + ']</span><span>' + esc(e.text) + "</span></div>").join("")
+      + '<div class="evt" style="border-top:1px solid var(--border);margin-top:8px;padding-top:10px"><span class="k final">[答案]</span><b>' + esc(r.answer) + "</b></div>";
+  } catch (e) {
+    $("tr-out").innerHTML = '<div class="state" style="color:var(--danger)"><p>' + esc(e.message) + "</p></div>";
+  }
+}
+$("tr-go").addEventListener("click", trace);
+$("tr-q").addEventListener("keydown", (e) => { if (e.key === "Enter") trace(); });
+
+// ---- 评估 ----
+$("ev-go").addEventListener("click", async () => {
+  $("ev-out").innerHTML = '<div class="state"><svg class="icon spin"><use href="#i-chart"/></svg><p>评估中：重建索引并跑全量 QA……</p></div>';
+  try {
+    const r = await api("/api/v1/eval/run", {});
+    const m = r.metrics, g = r.generative;
+    const iv = r.invariants.map((c) =>
+      "<tr><td>" + esc(c.name) + '</td><td><span class="tag ' + (c.pass ? "ok" : "warn") + '">' + (c.pass ? "PASS" : "FAIL") + "</span></td><td class='num'>" + esc(String(c.detail)) + "</td></tr>").join("");
+    $("ev-out").innerHTML = '<div class="grid2">'
+      + '<div><table><tr><th>检索指标</th><th>带重排</th><th>无重排</th></tr>'
+      + "<tr><td>recall@1</td><td class='num'>" + m.recallAt1.toFixed(4) + "</td><td class='num'>" + m.recallAt1NoRerank.toFixed(4) + "</td></tr>"
+      + "<tr><td>recall@3</td><td class='num'>" + m.recallAt3.toFixed(4) + "</td><td class='num'>" + m.recallAt3NoRerank.toFixed(4) + "</td></tr>"
+      + "<tr><td>recall@5</td><td class='num'>" + m.recallAt5.toFixed(4) + "</td><td class='num'>" + m.recallAt5NoRerank.toFixed(4) + "</td></tr>"
+      + "<tr><td>MRR</td><td class='num'>" + m.mrr.toFixed(4) + "</td><td class='num'>" + m.mrrNoRerank.toFixed(4) + "</td></tr>"
+      + "<tr><td>P50 / P95 延迟</td><td class='num' colspan='2'>" + m.retrievalP50Ms + " / " + m.retrievalP95Ms + " ms</td></tr></table></div>"
+      + '<div><table><tr><th>生成指标</th><th>值</th></tr>'
+      + "<tr><td>用例数</td><td class='num'>" + g.cases + "</td></tr>"
+      + "<tr><td>非空回答</td><td class='num'>" + g.nonEmpty + "</td></tr>"
+      + "<tr><td>忠实度（4-gram 覆盖）</td><td class='num'>" + (g.grounded / Math.max(g.cases, 1)).toFixed(4) + "</td></tr>"
+      + "<tr><td>平均速度</td><td class='num'>" + g.avgTokensPerSecond.toFixed(1) + " tok/s</td></tr>"
+      + "<tr><td>抽取式降级占比</td><td class='num'>" + g.answerModeExtractive + "</td></tr></table></div></div>"
+      + '<table style="margin-top:14px"><tr><th>不变量</th><th>状态</th><th>详情</th></tr>' + iv + "</table>";
+  } catch (e) {
+    $("ev-out").innerHTML = '<div class="state" style="color:var(--danger)"><p>' + esc(e.message) + "</p></div>";
+  }
+});
+</script>
+</body>
+</html>

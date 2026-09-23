@@ -1,0 +1,404 @@
+{"query": "api-gateway 需要重点观测哪些指标", "gold_doc_id": "ov-api-gateway", "hard_negatives": ["ov-inference-runtime", "ov-vector-store", "ov-scheduler"]}
+{"query": "api-gateway 需要重点观测哪些指标？", "gold_doc_id": "ov-api-gateway", "hard_negatives": ["ov-inference-runtime", "ov-vector-store", "ov-scheduler"]}
+{"query": "请问api-gateway 需要重点观测哪些指标", "gold_doc_id": "ov-api-gateway", "hard_negatives": ["ov-inference-runtime", "ov-vector-store", "ov-scheduler"]}
+{"query": "api-gateway 需要重点观测哪些指标", "gold_doc_id": "ov-api-gateway", "hard_negatives": ["ov-inference-runtime", "ov-vector-store", "ov-scheduler"]}
+{"query": "vector-store 需要重点观测哪些指标", "gold_doc_id": "ov-vector-store", "hard_negatives": ["ov-scheduler", "ov-eval-service", "ov-inference-runtime"]}
+{"query": "vector-store 需要重点观测哪些指标？", "gold_doc_id": "ov-vector-store", "hard_negatives": ["ov-scheduler", "ov-eval-service", "ov-inference-runtime"]}
+{"query": "请问vector-store 需要重点观测哪些指标", "gold_doc_id": "ov-vector-store", "hard_negatives": ["ov-scheduler", "ov-eval-service", "ov-inference-runtime"]}
+{"query": "vector-store 需要重点观测哪些指标", "gold_doc_id": "ov-vector-store", "hard_negatives": ["ov-scheduler", "ov-eval-service", "ov-inference-runtime"]}
+{"query": "推理运行时 inference-runtime 的职责是什么，依赖哪些组件", "gold_doc_id": "ov-inference-runtime", "hard_negatives": ["ov-vector-store", "ov-scheduler", "ov-eval-service"]}
+{"query": "推理运行时 inference-runtime 的职责是什么，依赖哪些组件？", "gold_doc_id": "ov-inference-runtime", "hard_negatives": ["ov-vector-store", "ov-scheduler", "ov-eval-service"]}
+{"query": "请问推理运行时 inference-runtime 的职责是什么，依赖哪些组件", "gold_doc_id": "ov-inference-runtime", "hard_negatives": ["ov-vector-store", "ov-scheduler", "ov-eval-service"]}
+{"query": "推理运行时 inference-runtime 的职责是什么 并且 依赖哪些组件", "gold_doc_id": "ov-inference-runtime", "hard_negatives": ["ov-vector-store", "ov-scheduler", "ov-eval-service"]}
+{"query": "摄取队列 ingest-queue 的职责是什么，依赖哪些组件", "gold_doc_id": "ov-ingest-queue", "hard_negatives": ["ov-trace-collector", "ov-cache-layer", "ov-vector-store"]}
+{"query": "摄取队列 ingest-queue 的职责是什么，依赖哪些组件？", "gold_doc_id": "ov-ingest-queue", "hard_negatives": ["ov-trace-collector", "ov-cache-layer", "ov-vector-store"]}
+{"query": "请问摄取队列 ingest-queue 的职责是什么，依赖哪些组件", "gold_doc_id": "ov-ingest-queue", "hard_negatives": ["ov-trace-collector", "ov-cache-layer", "ov-vector-store"]}
+{"query": "摄取队列 ingest-queue 的职责是什么 并且 依赖哪些组件", "gold_doc_id": "ov-ingest-queue", "hard_negatives": ["ov-trace-collector", "ov-cache-layer", "ov-vector-store"]}
+{"query": "评估服务的配置变更怎么生效", "gold_doc_id": "ov-eval-service", "hard_negatives": ["ov-vector-store", "ov-object-store", "ov-scheduler"]}
+{"query": "评估服务的配置变更怎么生效？", "gold_doc_id": "ov-eval-service", "hard_negatives": ["ov-vector-store", "ov-object-store", "ov-scheduler"]}
+{"query": "请问评估服务的配置变更怎么生效", "gold_doc_id": "ov-eval-service", "hard_negatives": ["ov-vector-store", "ov-object-store", "ov-scheduler"]}
+{"query": "评估服务的配置变更怎么生效", "gold_doc_id": "ov-eval-service", "hard_negatives": ["ov-vector-store", "ov-object-store", "ov-scheduler"]}
+{"query": "认证服务的配置变更怎么生效", "gold_doc_id": "ov-auth-service", "hard_negatives": ["ov-vector-store", "ov-eval-service", "ov-scheduler"]}
+{"query": "认证服务的配置变更怎么生效？", "gold_doc_id": "ov-auth-service", "hard_negatives": ["ov-vector-store", "ov-eval-service", "ov-scheduler"]}
+{"query": "请问认证服务的配置变更怎么生效", "gold_doc_id": "ov-auth-service", "hard_negatives": ["ov-vector-store", "ov-eval-service", "ov-scheduler"]}
+{"query": "认证服务的配置变更怎么生效", "gold_doc_id": "ov-auth-service", "hard_negatives": ["ov-vector-store", "ov-eval-service", "ov-scheduler"]}
+{"query": "调度器的配置变更怎么生效", "gold_doc_id": "ov-scheduler", "hard_negatives": ["ov-object-store", "ov-auth-service", "ov-ingest-queue"]}
+{"query": "调度器的配置变更怎么生效？", "gold_doc_id": "ov-scheduler", "hard_negatives": ["ov-object-store", "ov-auth-service", "ov-ingest-queue"]}
+{"query": "请问调度器的配置变更怎么生效", "gold_doc_id": "ov-scheduler", "hard_negatives": ["ov-object-store", "ov-auth-service", "ov-ingest-queue"]}
+{"query": "调度器的配置变更怎么生效", "gold_doc_id": "ov-scheduler", "hard_negatives": ["ov-object-store", "ov-auth-service", "ov-ingest-queue"]}
+{"query": "缓存层的配置变更怎么生效", "gold_doc_id": "ov-cache-layer", "hard_negatives": ["ov-auth-service", "ov-inference-runtime", "ov-api-gateway"]}
+{"query": "缓存层的配置变更怎么生效？", "gold_doc_id": "ov-cache-layer", "hard_negatives": ["ov-auth-service", "ov-inference-runtime", "ov-api-gateway"]}
+{"query": "请问缓存层的配置变更怎么生效", "gold_doc_id": "ov-cache-layer", "hard_negatives": ["ov-auth-service", "ov-inference-runtime", "ov-api-gateway"]}
+{"query": "缓存层的配置变更怎么生效", "gold_doc_id": "ov-cache-layer", "hard_negatives": ["ov-auth-service", "ov-inference-runtime", "ov-api-gateway"]}
+{"query": "对象存储的配置变更怎么生效", "gold_doc_id": "ov-object-store", "hard_negatives": ["ov-trace-collector", "ov-inference-runtime", "ov-scheduler"]}
+{"query": "对象存储的配置变更怎么生效？", "gold_doc_id": "ov-object-store", "hard_negatives": ["ov-trace-collector", "ov-inference-runtime", "ov-scheduler"]}
+{"query": "请问对象存储的配置变更怎么生效", "gold_doc_id": "ov-object-store", "hard_negatives": ["ov-trace-collector", "ov-inference-runtime", "ov-scheduler"]}
+{"query": "对象存储的配置变更怎么生效", "gold_doc_id": "ov-object-store", "hard_negatives": ["ov-trace-collector", "ov-inference-runtime", "ov-scheduler"]}
+{"query": "链路采集器的配置变更怎么生效", "gold_doc_id": "ov-trace-collector", "hard_negatives": ["ov-vector-store", "ov-auth-service", "ov-eval-service"]}
+{"query": "链路采集器的配置变更怎么生效？", "gold_doc_id": "ov-trace-collector", "hard_negatives": ["ov-vector-store", "ov-auth-service", "ov-eval-service"]}
+{"query": "请问链路采集器的配置变更怎么生效", "gold_doc_id": "ov-trace-collector", "hard_negatives": ["ov-vector-store", "ov-auth-service", "ov-eval-service"]}
+{"query": "链路采集器的配置变更怎么生效", "gold_doc_id": "ov-trace-collector", "hard_negatives": ["ov-vector-store", "ov-auth-service", "ov-eval-service"]}
+{"query": "API 网关返回 ETIMEDOUT 是什么原因，怎么修复", "gold_doc_id": "tr-api-gateway-ETIMEDOUT", "hard_negatives": ["tr-inference-runtime-ETIMEDOUT", "tr-vector-store-AUTH-401", "tr-trace-collector-AUTH-401"]}
+{"query": "API 网关返回 ETIMEDOUT 是什么原因，怎么修复？", "gold_doc_id": "tr-api-gateway-ETIMEDOUT", "hard_negatives": ["tr-inference-runtime-ETIMEDOUT", "tr-vector-store-AUTH-401", "tr-trace-collector-AUTH-401"]}
+{"query": "请问API 网关返回 ETIMEDOUT 是什么原因，怎么修复", "gold_doc_id": "tr-api-gateway-ETIMEDOUT", "hard_negatives": ["tr-inference-runtime-ETIMEDOUT", "tr-vector-store-AUTH-401", "tr-trace-collector-AUTH-401"]}
+{"query": "API 网关返回 ETIMEDOUT 是什么原因 并且 怎么修复", "gold_doc_id": "tr-api-gateway-ETIMEDOUT", "hard_negatives": ["tr-inference-runtime-ETIMEDOUT", "tr-vector-store-AUTH-401", "tr-trace-collector-AUTH-401"]}
+{"query": "API 网关返回 ECONNREFUSED 是什么原因，怎么修复", "gold_doc_id": "tr-api-gateway-ECONNREFUSED", "hard_negatives": ["tr-trace-collector-AUTH-401", "tr-vector-store-AUTH-401", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "API 网关返回 ECONNREFUSED 是什么原因，怎么修复？", "gold_doc_id": "tr-api-gateway-ECONNREFUSED", "hard_negatives": ["tr-trace-collector-AUTH-401", "tr-vector-store-AUTH-401", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "请问API 网关返回 ECONNREFUSED 是什么原因，怎么修复", "gold_doc_id": "tr-api-gateway-ECONNREFUSED", "hard_negatives": ["tr-trace-collector-AUTH-401", "tr-vector-store-AUTH-401", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "API 网关返回 ECONNREFUSED 是什么原因 并且 怎么修复", "gold_doc_id": "tr-api-gateway-ECONNREFUSED", "hard_negatives": ["tr-trace-collector-AUTH-401", "tr-vector-store-AUTH-401", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "OOM-409 错误码的根因和修复动作", "gold_doc_id": "tr-api-gateway-OOM-409", "hard_negatives": ["tr-eval-service-ETIMEDOUT", "tr-api-gateway-ECONNREFUSED", "tr-eval-service-RATE-429"]}
+{"query": "OOM-409 错误码的根因和修复动作？", "gold_doc_id": "tr-api-gateway-OOM-409", "hard_negatives": ["tr-eval-service-ETIMEDOUT", "tr-api-gateway-ECONNREFUSED", "tr-eval-service-RATE-429"]}
+{"query": "请问OOM-409 错误码的根因和修复动作", "gold_doc_id": "tr-api-gateway-OOM-409", "hard_negatives": ["tr-eval-service-ETIMEDOUT", "tr-api-gateway-ECONNREFUSED", "tr-eval-service-RATE-429"]}
+{"query": "OOM-409 错误码的根因和修复动作", "gold_doc_id": "tr-api-gateway-OOM-409", "hard_negatives": ["tr-eval-service-ETIMEDOUT", "tr-api-gateway-ECONNREFUSED", "tr-eval-service-RATE-429"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-api-gateway-IDX-CORRUPT", "hard_negatives": ["tr-eval-service-IDX-CORRUPT", "tr-auth-service-AUTH-401", "tr-object-store-ECONNREFUSED"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作？", "gold_doc_id": "tr-api-gateway-IDX-CORRUPT", "hard_negatives": ["tr-eval-service-IDX-CORRUPT", "tr-auth-service-AUTH-401", "tr-object-store-ECONNREFUSED"]}
+{"query": "请问IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-api-gateway-IDX-CORRUPT", "hard_negatives": ["tr-eval-service-IDX-CORRUPT", "tr-auth-service-AUTH-401", "tr-object-store-ECONNREFUSED"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-api-gateway-IDX-CORRUPT", "hard_negatives": ["tr-eval-service-IDX-CORRUPT", "tr-auth-service-AUTH-401", "tr-object-store-ECONNREFUSED"]}
+{"query": "RATE-429 错误码的根因和修复动作", "gold_doc_id": "tr-api-gateway-RATE-429", "hard_negatives": ["tr-eval-service-OOM-409", "tr-ingest-queue-OOM-409", "tr-inference-runtime-OOM-409"]}
+{"query": "RATE-429 错误码的根因和修复动作？", "gold_doc_id": "tr-api-gateway-RATE-429", "hard_negatives": ["tr-eval-service-OOM-409", "tr-ingest-queue-OOM-409", "tr-inference-runtime-OOM-409"]}
+{"query": "请问RATE-429 错误码的根因和修复动作", "gold_doc_id": "tr-api-gateway-RATE-429", "hard_negatives": ["tr-eval-service-OOM-409", "tr-ingest-queue-OOM-409", "tr-inference-runtime-OOM-409"]}
+{"query": "RATE-429 错误码的根因和修复动作", "gold_doc_id": "tr-api-gateway-RATE-429", "hard_negatives": ["tr-eval-service-OOM-409", "tr-ingest-queue-OOM-409", "tr-inference-runtime-OOM-409"]}
+{"query": "api-gateway 出现 AUTH-401 的排查步骤是什么", "gold_doc_id": "tr-api-gateway-AUTH-401", "hard_negatives": ["tr-api-gateway-RATE-429", "tr-cache-layer-ECONNREFUSED", "tr-ingest-queue-AUTH-401"]}
+{"query": "api-gateway 出现 AUTH-401 的排查步骤是什么？", "gold_doc_id": "tr-api-gateway-AUTH-401", "hard_negatives": ["tr-api-gateway-RATE-429", "tr-cache-layer-ECONNREFUSED", "tr-ingest-queue-AUTH-401"]}
+{"query": "请问api-gateway 出现 AUTH-401 的排查步骤是什么", "gold_doc_id": "tr-api-gateway-AUTH-401", "hard_negatives": ["tr-api-gateway-RATE-429", "tr-cache-layer-ECONNREFUSED", "tr-ingest-queue-AUTH-401"]}
+{"query": "api-gateway 出现 AUTH-401 的排查步骤是什么", "gold_doc_id": "tr-api-gateway-AUTH-401", "hard_negatives": ["tr-api-gateway-RATE-429", "tr-cache-layer-ECONNREFUSED", "tr-ingest-queue-AUTH-401"]}
+{"query": "api-gateway 出现 SCHEMA-MISMATCH 的排查步骤是什么", "gold_doc_id": "tr-api-gateway-SCHEMA-MISMATCH", "hard_negatives": ["tr-inference-runtime-RATE-429", "tr-ingest-queue-ECONNREFUSED", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "api-gateway 出现 SCHEMA-MISMATCH 的排查步骤是什么？", "gold_doc_id": "tr-api-gateway-SCHEMA-MISMATCH", "hard_negatives": ["tr-inference-runtime-RATE-429", "tr-ingest-queue-ECONNREFUSED", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "请问api-gateway 出现 SCHEMA-MISMATCH 的排查步骤是什么", "gold_doc_id": "tr-api-gateway-SCHEMA-MISMATCH", "hard_negatives": ["tr-inference-runtime-RATE-429", "tr-ingest-queue-ECONNREFUSED", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "api-gateway 出现 SCHEMA-MISMATCH 的排查步骤是什么", "gold_doc_id": "tr-api-gateway-SCHEMA-MISMATCH", "hard_negatives": ["tr-inference-runtime-RATE-429", "tr-ingest-queue-ECONNREFUSED", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "向量库返回 ETIMEDOUT 是什么原因，怎么修复", "gold_doc_id": "tr-vector-store-ETIMEDOUT", "hard_negatives": ["tr-inference-runtime-ECONNREFUSED", "tr-cache-layer-OOM-409", "tr-scheduler-IDX-CORRUPT"]}
+{"query": "向量库返回 ETIMEDOUT 是什么原因，怎么修复？", "gold_doc_id": "tr-vector-store-ETIMEDOUT", "hard_negatives": ["tr-inference-runtime-ECONNREFUSED", "tr-cache-layer-OOM-409", "tr-scheduler-IDX-CORRUPT"]}
+{"query": "请问向量库返回 ETIMEDOUT 是什么原因，怎么修复", "gold_doc_id": "tr-vector-store-ETIMEDOUT", "hard_negatives": ["tr-inference-runtime-ECONNREFUSED", "tr-cache-layer-OOM-409", "tr-scheduler-IDX-CORRUPT"]}
+{"query": "向量库返回 ETIMEDOUT 是什么原因 并且 怎么修复", "gold_doc_id": "tr-vector-store-ETIMEDOUT", "hard_negatives": ["tr-inference-runtime-ECONNREFUSED", "tr-cache-layer-OOM-409", "tr-scheduler-IDX-CORRUPT"]}
+{"query": "ECONNREFUSED 错误码的根因和修复动作", "gold_doc_id": "tr-vector-store-ECONNREFUSED", "hard_negatives": ["tr-auth-service-IDX-CORRUPT", "tr-ingest-queue-ECONNREFUSED", "tr-api-gateway-ETIMEDOUT"]}
+{"query": "ECONNREFUSED 错误码的根因和修复动作？", "gold_doc_id": "tr-vector-store-ECONNREFUSED", "hard_negatives": ["tr-auth-service-IDX-CORRUPT", "tr-ingest-queue-ECONNREFUSED", "tr-api-gateway-ETIMEDOUT"]}
+{"query": "请问ECONNREFUSED 错误码的根因和修复动作", "gold_doc_id": "tr-vector-store-ECONNREFUSED", "hard_negatives": ["tr-auth-service-IDX-CORRUPT", "tr-ingest-queue-ECONNREFUSED", "tr-api-gateway-ETIMEDOUT"]}
+{"query": "ECONNREFUSED 错误码的根因和修复动作", "gold_doc_id": "tr-vector-store-ECONNREFUSED", "hard_negatives": ["tr-auth-service-IDX-CORRUPT", "tr-ingest-queue-ECONNREFUSED", "tr-api-gateway-ETIMEDOUT"]}
+{"query": "向量库返回 OOM-409 是什么原因，怎么修复", "gold_doc_id": "tr-vector-store-OOM-409", "hard_negatives": ["tr-ingest-queue-AUTH-401", "tr-trace-collector-RATE-429", "tr-object-store-OOM-409"]}
+{"query": "向量库返回 OOM-409 是什么原因，怎么修复？", "gold_doc_id": "tr-vector-store-OOM-409", "hard_negatives": ["tr-ingest-queue-AUTH-401", "tr-trace-collector-RATE-429", "tr-object-store-OOM-409"]}
+{"query": "请问向量库返回 OOM-409 是什么原因，怎么修复", "gold_doc_id": "tr-vector-store-OOM-409", "hard_negatives": ["tr-ingest-queue-AUTH-401", "tr-trace-collector-RATE-429", "tr-object-store-OOM-409"]}
+{"query": "向量库返回 OOM-409 是什么原因 并且 怎么修复", "gold_doc_id": "tr-vector-store-OOM-409", "hard_negatives": ["tr-ingest-queue-AUTH-401", "tr-trace-collector-RATE-429", "tr-object-store-OOM-409"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-vector-store-IDX-CORRUPT", "hard_negatives": ["tr-vector-store-SCHEMA-MISMATCH", "tr-vector-store-RATE-429", "tr-object-store-SCHEMA-MISMATCH"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作？", "gold_doc_id": "tr-vector-store-IDX-CORRUPT", "hard_negatives": ["tr-vector-store-SCHEMA-MISMATCH", "tr-vector-store-RATE-429", "tr-object-store-SCHEMA-MISMATCH"]}
+{"query": "请问IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-vector-store-IDX-CORRUPT", "hard_negatives": ["tr-vector-store-SCHEMA-MISMATCH", "tr-vector-store-RATE-429", "tr-object-store-SCHEMA-MISMATCH"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-vector-store-IDX-CORRUPT", "hard_negatives": ["tr-vector-store-SCHEMA-MISMATCH", "tr-vector-store-RATE-429", "tr-object-store-SCHEMA-MISMATCH"]}
+{"query": "向量库返回 RATE-429 是什么原因，怎么修复", "gold_doc_id": "tr-vector-store-RATE-429", "hard_negatives": ["tr-cache-layer-SCHEMA-MISMATCH", "tr-vector-store-ETIMEDOUT", "tr-object-store-AUTH-401"]}
+{"query": "向量库返回 RATE-429 是什么原因，怎么修复？", "gold_doc_id": "tr-vector-store-RATE-429", "hard_negatives": ["tr-cache-layer-SCHEMA-MISMATCH", "tr-vector-store-ETIMEDOUT", "tr-object-store-AUTH-401"]}
+{"query": "请问向量库返回 RATE-429 是什么原因，怎么修复", "gold_doc_id": "tr-vector-store-RATE-429", "hard_negatives": ["tr-cache-layer-SCHEMA-MISMATCH", "tr-vector-store-ETIMEDOUT", "tr-object-store-AUTH-401"]}
+{"query": "向量库返回 RATE-429 是什么原因 并且 怎么修复", "gold_doc_id": "tr-vector-store-RATE-429", "hard_negatives": ["tr-cache-layer-SCHEMA-MISMATCH", "tr-vector-store-ETIMEDOUT", "tr-object-store-AUTH-401"]}
+{"query": "AUTH-401 错误码的根因和修复动作", "gold_doc_id": "tr-vector-store-AUTH-401", "hard_negatives": ["tr-auth-service-SCHEMA-MISMATCH", "tr-vector-store-ECONNREFUSED", "tr-eval-service-AUTH-401"]}
+{"query": "AUTH-401 错误码的根因和修复动作？", "gold_doc_id": "tr-vector-store-AUTH-401", "hard_negatives": ["tr-auth-service-SCHEMA-MISMATCH", "tr-vector-store-ECONNREFUSED", "tr-eval-service-AUTH-401"]}
+{"query": "请问AUTH-401 错误码的根因和修复动作", "gold_doc_id": "tr-vector-store-AUTH-401", "hard_negatives": ["tr-auth-service-SCHEMA-MISMATCH", "tr-vector-store-ECONNREFUSED", "tr-eval-service-AUTH-401"]}
+{"query": "AUTH-401 错误码的根因和修复动作", "gold_doc_id": "tr-vector-store-AUTH-401", "hard_negatives": ["tr-auth-service-SCHEMA-MISMATCH", "tr-vector-store-ECONNREFUSED", "tr-eval-service-AUTH-401"]}
+{"query": "SCHEMA-MISMATCH 错误码的根因和修复动作", "gold_doc_id": "tr-vector-store-SCHEMA-MISMATCH", "hard_negatives": ["tr-eval-service-AUTH-401", "tr-scheduler-ECONNREFUSED", "tr-api-gateway-RATE-429"]}
+{"query": "SCHEMA-MISMATCH 错误码的根因和修复动作？", "gold_doc_id": "tr-vector-store-SCHEMA-MISMATCH", "hard_negatives": ["tr-eval-service-AUTH-401", "tr-scheduler-ECONNREFUSED", "tr-api-gateway-RATE-429"]}
+{"query": "请问SCHEMA-MISMATCH 错误码的根因和修复动作", "gold_doc_id": "tr-vector-store-SCHEMA-MISMATCH", "hard_negatives": ["tr-eval-service-AUTH-401", "tr-scheduler-ECONNREFUSED", "tr-api-gateway-RATE-429"]}
+{"query": "SCHEMA-MISMATCH 错误码的根因和修复动作", "gold_doc_id": "tr-vector-store-SCHEMA-MISMATCH", "hard_negatives": ["tr-eval-service-AUTH-401", "tr-scheduler-ECONNREFUSED", "tr-api-gateway-RATE-429"]}
+{"query": "推理运行时返回 ETIMEDOUT 是什么原因，怎么修复", "gold_doc_id": "tr-inference-runtime-ETIMEDOUT", "hard_negatives": ["tr-object-store-SCHEMA-MISMATCH", "tr-inference-runtime-IDX-CORRUPT", "tr-inference-runtime-ECONNREFUSED"]}
+{"query": "推理运行时返回 ETIMEDOUT 是什么原因，怎么修复？", "gold_doc_id": "tr-inference-runtime-ETIMEDOUT", "hard_negatives": ["tr-object-store-SCHEMA-MISMATCH", "tr-inference-runtime-IDX-CORRUPT", "tr-inference-runtime-ECONNREFUSED"]}
+{"query": "请问推理运行时返回 ETIMEDOUT 是什么原因，怎么修复", "gold_doc_id": "tr-inference-runtime-ETIMEDOUT", "hard_negatives": ["tr-object-store-SCHEMA-MISMATCH", "tr-inference-runtime-IDX-CORRUPT", "tr-inference-runtime-ECONNREFUSED"]}
+{"query": "推理运行时返回 ETIMEDOUT 是什么原因 并且 怎么修复", "gold_doc_id": "tr-inference-runtime-ETIMEDOUT", "hard_negatives": ["tr-object-store-SCHEMA-MISMATCH", "tr-inference-runtime-IDX-CORRUPT", "tr-inference-runtime-ECONNREFUSED"]}
+{"query": "inference-runtime 出现 ECONNREFUSED 的排查步骤是什么", "gold_doc_id": "tr-inference-runtime-ECONNREFUSED", "hard_negatives": ["tr-auth-service-ETIMEDOUT", "tr-api-gateway-ETIMEDOUT", "tr-vector-store-RATE-429"]}
+{"query": "inference-runtime 出现 ECONNREFUSED 的排查步骤是什么？", "gold_doc_id": "tr-inference-runtime-ECONNREFUSED", "hard_negatives": ["tr-auth-service-ETIMEDOUT", "tr-api-gateway-ETIMEDOUT", "tr-vector-store-RATE-429"]}
+{"query": "请问inference-runtime 出现 ECONNREFUSED 的排查步骤是什么", "gold_doc_id": "tr-inference-runtime-ECONNREFUSED", "hard_negatives": ["tr-auth-service-ETIMEDOUT", "tr-api-gateway-ETIMEDOUT", "tr-vector-store-RATE-429"]}
+{"query": "inference-runtime 出现 ECONNREFUSED 的排查步骤是什么", "gold_doc_id": "tr-inference-runtime-ECONNREFUSED", "hard_negatives": ["tr-auth-service-ETIMEDOUT", "tr-api-gateway-ETIMEDOUT", "tr-vector-store-RATE-429"]}
+{"query": "inference-runtime 出现 OOM-409 的排查步骤是什么", "gold_doc_id": "tr-inference-runtime-OOM-409", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-api-gateway-ETIMEDOUT", "tr-auth-service-IDX-CORRUPT"]}
+{"query": "inference-runtime 出现 OOM-409 的排查步骤是什么？", "gold_doc_id": "tr-inference-runtime-OOM-409", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-api-gateway-ETIMEDOUT", "tr-auth-service-IDX-CORRUPT"]}
+{"query": "请问inference-runtime 出现 OOM-409 的排查步骤是什么", "gold_doc_id": "tr-inference-runtime-OOM-409", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-api-gateway-ETIMEDOUT", "tr-auth-service-IDX-CORRUPT"]}
+{"query": "inference-runtime 出现 OOM-409 的排查步骤是什么", "gold_doc_id": "tr-inference-runtime-OOM-409", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-api-gateway-ETIMEDOUT", "tr-auth-service-IDX-CORRUPT"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-inference-runtime-IDX-CORRUPT", "hard_negatives": ["tr-cache-layer-AUTH-401", "tr-cache-layer-ECONNREFUSED", "tr-auth-service-AUTH-401"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作？", "gold_doc_id": "tr-inference-runtime-IDX-CORRUPT", "hard_negatives": ["tr-cache-layer-AUTH-401", "tr-cache-layer-ECONNREFUSED", "tr-auth-service-AUTH-401"]}
+{"query": "请问IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-inference-runtime-IDX-CORRUPT", "hard_negatives": ["tr-cache-layer-AUTH-401", "tr-cache-layer-ECONNREFUSED", "tr-auth-service-AUTH-401"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-inference-runtime-IDX-CORRUPT", "hard_negatives": ["tr-cache-layer-AUTH-401", "tr-cache-layer-ECONNREFUSED", "tr-auth-service-AUTH-401"]}
+{"query": "RATE-429 错误码的根因和修复动作", "gold_doc_id": "tr-inference-runtime-RATE-429", "hard_negatives": ["tr-scheduler-RATE-429", "tr-scheduler-AUTH-401", "tr-api-gateway-ECONNREFUSED"]}
+{"query": "RATE-429 错误码的根因和修复动作？", "gold_doc_id": "tr-inference-runtime-RATE-429", "hard_negatives": ["tr-scheduler-RATE-429", "tr-scheduler-AUTH-401", "tr-api-gateway-ECONNREFUSED"]}
+{"query": "请问RATE-429 错误码的根因和修复动作", "gold_doc_id": "tr-inference-runtime-RATE-429", "hard_negatives": ["tr-scheduler-RATE-429", "tr-scheduler-AUTH-401", "tr-api-gateway-ECONNREFUSED"]}
+{"query": "RATE-429 错误码的根因和修复动作", "gold_doc_id": "tr-inference-runtime-RATE-429", "hard_negatives": ["tr-scheduler-RATE-429", "tr-scheduler-AUTH-401", "tr-api-gateway-ECONNREFUSED"]}
+{"query": "推理运行时返回 AUTH-401 是什么原因，怎么修复", "gold_doc_id": "tr-inference-runtime-AUTH-401", "hard_negatives": ["tr-object-store-OOM-409", "tr-scheduler-IDX-CORRUPT", "tr-vector-store-SCHEMA-MISMATCH"]}
+{"query": "推理运行时返回 AUTH-401 是什么原因，怎么修复？", "gold_doc_id": "tr-inference-runtime-AUTH-401", "hard_negatives": ["tr-object-store-OOM-409", "tr-scheduler-IDX-CORRUPT", "tr-vector-store-SCHEMA-MISMATCH"]}
+{"query": "请问推理运行时返回 AUTH-401 是什么原因，怎么修复", "gold_doc_id": "tr-inference-runtime-AUTH-401", "hard_negatives": ["tr-object-store-OOM-409", "tr-scheduler-IDX-CORRUPT", "tr-vector-store-SCHEMA-MISMATCH"]}
+{"query": "推理运行时返回 AUTH-401 是什么原因 并且 怎么修复", "gold_doc_id": "tr-inference-runtime-AUTH-401", "hard_negatives": ["tr-object-store-OOM-409", "tr-scheduler-IDX-CORRUPT", "tr-vector-store-SCHEMA-MISMATCH"]}
+{"query": "推理运行时返回 SCHEMA-MISMATCH 是什么原因，怎么修复", "gold_doc_id": "tr-inference-runtime-SCHEMA-MISMATCH", "hard_negatives": ["tr-cache-layer-RATE-429", "tr-auth-service-AUTH-401", "tr-api-gateway-SCHEMA-MISMATCH"]}
+{"query": "推理运行时返回 SCHEMA-MISMATCH 是什么原因，怎么修复？", "gold_doc_id": "tr-inference-runtime-SCHEMA-MISMATCH", "hard_negatives": ["tr-cache-layer-RATE-429", "tr-auth-service-AUTH-401", "tr-api-gateway-SCHEMA-MISMATCH"]}
+{"query": "请问推理运行时返回 SCHEMA-MISMATCH 是什么原因，怎么修复", "gold_doc_id": "tr-inference-runtime-SCHEMA-MISMATCH", "hard_negatives": ["tr-cache-layer-RATE-429", "tr-auth-service-AUTH-401", "tr-api-gateway-SCHEMA-MISMATCH"]}
+{"query": "推理运行时返回 SCHEMA-MISMATCH 是什么原因 并且 怎么修复", "gold_doc_id": "tr-inference-runtime-SCHEMA-MISMATCH", "hard_negatives": ["tr-cache-layer-RATE-429", "tr-auth-service-AUTH-401", "tr-api-gateway-SCHEMA-MISMATCH"]}
+{"query": "ingest-queue 出现 ETIMEDOUT 的排查步骤是什么", "gold_doc_id": "tr-ingest-queue-ETIMEDOUT", "hard_negatives": ["tr-ingest-queue-OOM-409", "tr-object-store-RATE-429", "tr-inference-runtime-OOM-409"]}
+{"query": "ingest-queue 出现 ETIMEDOUT 的排查步骤是什么？", "gold_doc_id": "tr-ingest-queue-ETIMEDOUT", "hard_negatives": ["tr-ingest-queue-OOM-409", "tr-object-store-RATE-429", "tr-inference-runtime-OOM-409"]}
+{"query": "请问ingest-queue 出现 ETIMEDOUT 的排查步骤是什么", "gold_doc_id": "tr-ingest-queue-ETIMEDOUT", "hard_negatives": ["tr-ingest-queue-OOM-409", "tr-object-store-RATE-429", "tr-inference-runtime-OOM-409"]}
+{"query": "ingest-queue 出现 ETIMEDOUT 的排查步骤是什么", "gold_doc_id": "tr-ingest-queue-ETIMEDOUT", "hard_negatives": ["tr-ingest-queue-OOM-409", "tr-object-store-RATE-429", "tr-inference-runtime-OOM-409"]}
+{"query": "ECONNREFUSED 错误码的根因和修复动作", "gold_doc_id": "tr-ingest-queue-ECONNREFUSED", "hard_negatives": ["tr-inference-runtime-OOM-409", "tr-inference-runtime-RATE-429", "tr-api-gateway-ECONNREFUSED"]}
+{"query": "ECONNREFUSED 错误码的根因和修复动作？", "gold_doc_id": "tr-ingest-queue-ECONNREFUSED", "hard_negatives": ["tr-inference-runtime-OOM-409", "tr-inference-runtime-RATE-429", "tr-api-gateway-ECONNREFUSED"]}
+{"query": "请问ECONNREFUSED 错误码的根因和修复动作", "gold_doc_id": "tr-ingest-queue-ECONNREFUSED", "hard_negatives": ["tr-inference-runtime-OOM-409", "tr-inference-runtime-RATE-429", "tr-api-gateway-ECONNREFUSED"]}
+{"query": "ECONNREFUSED 错误码的根因和修复动作", "gold_doc_id": "tr-ingest-queue-ECONNREFUSED", "hard_negatives": ["tr-inference-runtime-OOM-409", "tr-inference-runtime-RATE-429", "tr-api-gateway-ECONNREFUSED"]}
+{"query": "ingest-queue 出现 OOM-409 的排查步骤是什么", "gold_doc_id": "tr-ingest-queue-OOM-409", "hard_negatives": ["tr-object-store-AUTH-401", "tr-eval-service-OOM-409", "tr-api-gateway-OOM-409"]}
+{"query": "ingest-queue 出现 OOM-409 的排查步骤是什么？", "gold_doc_id": "tr-ingest-queue-OOM-409", "hard_negatives": ["tr-object-store-AUTH-401", "tr-eval-service-OOM-409", "tr-api-gateway-OOM-409"]}
+{"query": "请问ingest-queue 出现 OOM-409 的排查步骤是什么", "gold_doc_id": "tr-ingest-queue-OOM-409", "hard_negatives": ["tr-object-store-AUTH-401", "tr-eval-service-OOM-409", "tr-api-gateway-OOM-409"]}
+{"query": "ingest-queue 出现 OOM-409 的排查步骤是什么", "gold_doc_id": "tr-ingest-queue-OOM-409", "hard_negatives": ["tr-object-store-AUTH-401", "tr-eval-service-OOM-409", "tr-api-gateway-OOM-409"]}
+{"query": "ingest-queue 出现 IDX-CORRUPT 的排查步骤是什么", "gold_doc_id": "tr-ingest-queue-IDX-CORRUPT", "hard_negatives": ["tr-inference-runtime-RATE-429", "tr-auth-service-OOM-409", "tr-scheduler-AUTH-401"]}
+{"query": "ingest-queue 出现 IDX-CORRUPT 的排查步骤是什么？", "gold_doc_id": "tr-ingest-queue-IDX-CORRUPT", "hard_negatives": ["tr-inference-runtime-RATE-429", "tr-auth-service-OOM-409", "tr-scheduler-AUTH-401"]}
+{"query": "请问ingest-queue 出现 IDX-CORRUPT 的排查步骤是什么", "gold_doc_id": "tr-ingest-queue-IDX-CORRUPT", "hard_negatives": ["tr-inference-runtime-RATE-429", "tr-auth-service-OOM-409", "tr-scheduler-AUTH-401"]}
+{"query": "ingest-queue 出现 IDX-CORRUPT 的排查步骤是什么", "gold_doc_id": "tr-ingest-queue-IDX-CORRUPT", "hard_negatives": ["tr-inference-runtime-RATE-429", "tr-auth-service-OOM-409", "tr-scheduler-AUTH-401"]}
+{"query": "ingest-queue 出现 RATE-429 的排查步骤是什么", "gold_doc_id": "tr-ingest-queue-RATE-429", "hard_negatives": ["tr-inference-runtime-SCHEMA-MISMATCH", "tr-vector-store-ECONNREFUSED", "tr-ingest-queue-SCHEMA-MISMATCH"]}
+{"query": "ingest-queue 出现 RATE-429 的排查步骤是什么？", "gold_doc_id": "tr-ingest-queue-RATE-429", "hard_negatives": ["tr-inference-runtime-SCHEMA-MISMATCH", "tr-vector-store-ECONNREFUSED", "tr-ingest-queue-SCHEMA-MISMATCH"]}
+{"query": "请问ingest-queue 出现 RATE-429 的排查步骤是什么", "gold_doc_id": "tr-ingest-queue-RATE-429", "hard_negatives": ["tr-inference-runtime-SCHEMA-MISMATCH", "tr-vector-store-ECONNREFUSED", "tr-ingest-queue-SCHEMA-MISMATCH"]}
+{"query": "ingest-queue 出现 RATE-429 的排查步骤是什么", "gold_doc_id": "tr-ingest-queue-RATE-429", "hard_negatives": ["tr-inference-runtime-SCHEMA-MISMATCH", "tr-vector-store-ECONNREFUSED", "tr-ingest-queue-SCHEMA-MISMATCH"]}
+{"query": "ingest-queue 出现 AUTH-401 的排查步骤是什么", "gold_doc_id": "tr-ingest-queue-AUTH-401", "hard_negatives": ["tr-trace-collector-ECONNREFUSED", "tr-api-gateway-ETIMEDOUT", "tr-ingest-queue-ETIMEDOUT"]}
+{"query": "ingest-queue 出现 AUTH-401 的排查步骤是什么？", "gold_doc_id": "tr-ingest-queue-AUTH-401", "hard_negatives": ["tr-trace-collector-ECONNREFUSED", "tr-api-gateway-ETIMEDOUT", "tr-ingest-queue-ETIMEDOUT"]}
+{"query": "请问ingest-queue 出现 AUTH-401 的排查步骤是什么", "gold_doc_id": "tr-ingest-queue-AUTH-401", "hard_negatives": ["tr-trace-collector-ECONNREFUSED", "tr-api-gateway-ETIMEDOUT", "tr-ingest-queue-ETIMEDOUT"]}
+{"query": "ingest-queue 出现 AUTH-401 的排查步骤是什么", "gold_doc_id": "tr-ingest-queue-AUTH-401", "hard_negatives": ["tr-trace-collector-ECONNREFUSED", "tr-api-gateway-ETIMEDOUT", "tr-ingest-queue-ETIMEDOUT"]}
+{"query": "摄取队列返回 SCHEMA-MISMATCH 是什么原因，怎么修复", "gold_doc_id": "tr-ingest-queue-SCHEMA-MISMATCH", "hard_negatives": ["tr-object-store-SCHEMA-MISMATCH", "tr-api-gateway-SCHEMA-MISMATCH", "tr-auth-service-RATE-429"]}
+{"query": "摄取队列返回 SCHEMA-MISMATCH 是什么原因，怎么修复？", "gold_doc_id": "tr-ingest-queue-SCHEMA-MISMATCH", "hard_negatives": ["tr-object-store-SCHEMA-MISMATCH", "tr-api-gateway-SCHEMA-MISMATCH", "tr-auth-service-RATE-429"]}
+{"query": "请问摄取队列返回 SCHEMA-MISMATCH 是什么原因，怎么修复", "gold_doc_id": "tr-ingest-queue-SCHEMA-MISMATCH", "hard_negatives": ["tr-object-store-SCHEMA-MISMATCH", "tr-api-gateway-SCHEMA-MISMATCH", "tr-auth-service-RATE-429"]}
+{"query": "摄取队列返回 SCHEMA-MISMATCH 是什么原因 并且 怎么修复", "gold_doc_id": "tr-ingest-queue-SCHEMA-MISMATCH", "hard_negatives": ["tr-object-store-SCHEMA-MISMATCH", "tr-api-gateway-SCHEMA-MISMATCH", "tr-auth-service-RATE-429"]}
+{"query": "ETIMEDOUT 错误码的根因和修复动作", "gold_doc_id": "tr-eval-service-ETIMEDOUT", "hard_negatives": ["tr-scheduler-OOM-409", "tr-cache-layer-ETIMEDOUT", "tr-eval-service-ECONNREFUSED"]}
+{"query": "ETIMEDOUT 错误码的根因和修复动作？", "gold_doc_id": "tr-eval-service-ETIMEDOUT", "hard_negatives": ["tr-scheduler-OOM-409", "tr-cache-layer-ETIMEDOUT", "tr-eval-service-ECONNREFUSED"]}
+{"query": "请问ETIMEDOUT 错误码的根因和修复动作", "gold_doc_id": "tr-eval-service-ETIMEDOUT", "hard_negatives": ["tr-scheduler-OOM-409", "tr-cache-layer-ETIMEDOUT", "tr-eval-service-ECONNREFUSED"]}
+{"query": "ETIMEDOUT 错误码的根因和修复动作", "gold_doc_id": "tr-eval-service-ETIMEDOUT", "hard_negatives": ["tr-scheduler-OOM-409", "tr-cache-layer-ETIMEDOUT", "tr-eval-service-ECONNREFUSED"]}
+{"query": "eval-service 出现 ECONNREFUSED 的排查步骤是什么", "gold_doc_id": "tr-eval-service-ECONNREFUSED", "hard_negatives": ["tr-auth-service-RATE-429", "tr-ingest-queue-ETIMEDOUT", "tr-inference-runtime-RATE-429"]}
+{"query": "eval-service 出现 ECONNREFUSED 的排查步骤是什么？", "gold_doc_id": "tr-eval-service-ECONNREFUSED", "hard_negatives": ["tr-auth-service-RATE-429", "tr-ingest-queue-ETIMEDOUT", "tr-inference-runtime-RATE-429"]}
+{"query": "请问eval-service 出现 ECONNREFUSED 的排查步骤是什么", "gold_doc_id": "tr-eval-service-ECONNREFUSED", "hard_negatives": ["tr-auth-service-RATE-429", "tr-ingest-queue-ETIMEDOUT", "tr-inference-runtime-RATE-429"]}
+{"query": "eval-service 出现 ECONNREFUSED 的排查步骤是什么", "gold_doc_id": "tr-eval-service-ECONNREFUSED", "hard_negatives": ["tr-auth-service-RATE-429", "tr-ingest-queue-ETIMEDOUT", "tr-inference-runtime-RATE-429"]}
+{"query": "评估服务返回 OOM-409 是什么原因，怎么修复", "gold_doc_id": "tr-eval-service-OOM-409", "hard_negatives": ["tr-auth-service-ECONNREFUSED", "tr-object-store-ECONNREFUSED", "tr-inference-runtime-SCHEMA-MISMATCH"]}
+{"query": "评估服务返回 OOM-409 是什么原因，怎么修复？", "gold_doc_id": "tr-eval-service-OOM-409", "hard_negatives": ["tr-auth-service-ECONNREFUSED", "tr-object-store-ECONNREFUSED", "tr-inference-runtime-SCHEMA-MISMATCH"]}
+{"query": "请问评估服务返回 OOM-409 是什么原因，怎么修复", "gold_doc_id": "tr-eval-service-OOM-409", "hard_negatives": ["tr-auth-service-ECONNREFUSED", "tr-object-store-ECONNREFUSED", "tr-inference-runtime-SCHEMA-MISMATCH"]}
+{"query": "评估服务返回 OOM-409 是什么原因 并且 怎么修复", "gold_doc_id": "tr-eval-service-OOM-409", "hard_negatives": ["tr-auth-service-ECONNREFUSED", "tr-object-store-ECONNREFUSED", "tr-inference-runtime-SCHEMA-MISMATCH"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-eval-service-IDX-CORRUPT", "hard_negatives": ["tr-auth-service-IDX-CORRUPT", "tr-eval-service-AUTH-401", "tr-object-store-ETIMEDOUT"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作？", "gold_doc_id": "tr-eval-service-IDX-CORRUPT", "hard_negatives": ["tr-auth-service-IDX-CORRUPT", "tr-eval-service-AUTH-401", "tr-object-store-ETIMEDOUT"]}
+{"query": "请问IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-eval-service-IDX-CORRUPT", "hard_negatives": ["tr-auth-service-IDX-CORRUPT", "tr-eval-service-AUTH-401", "tr-object-store-ETIMEDOUT"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-eval-service-IDX-CORRUPT", "hard_negatives": ["tr-auth-service-IDX-CORRUPT", "tr-eval-service-AUTH-401", "tr-object-store-ETIMEDOUT"]}
+{"query": "RATE-429 错误码的根因和修复动作", "gold_doc_id": "tr-eval-service-RATE-429", "hard_negatives": ["tr-api-gateway-RATE-429", "tr-cache-layer-SCHEMA-MISMATCH", "tr-eval-service-IDX-CORRUPT"]}
+{"query": "RATE-429 错误码的根因和修复动作？", "gold_doc_id": "tr-eval-service-RATE-429", "hard_negatives": ["tr-api-gateway-RATE-429", "tr-cache-layer-SCHEMA-MISMATCH", "tr-eval-service-IDX-CORRUPT"]}
+{"query": "请问RATE-429 错误码的根因和修复动作", "gold_doc_id": "tr-eval-service-RATE-429", "hard_negatives": ["tr-api-gateway-RATE-429", "tr-cache-layer-SCHEMA-MISMATCH", "tr-eval-service-IDX-CORRUPT"]}
+{"query": "RATE-429 错误码的根因和修复动作", "gold_doc_id": "tr-eval-service-RATE-429", "hard_negatives": ["tr-api-gateway-RATE-429", "tr-cache-layer-SCHEMA-MISMATCH", "tr-eval-service-IDX-CORRUPT"]}
+{"query": "评估服务返回 AUTH-401 是什么原因，怎么修复", "gold_doc_id": "tr-eval-service-AUTH-401", "hard_negatives": ["tr-cache-layer-ETIMEDOUT", "tr-vector-store-AUTH-401", "tr-eval-service-IDX-CORRUPT"]}
+{"query": "评估服务返回 AUTH-401 是什么原因，怎么修复？", "gold_doc_id": "tr-eval-service-AUTH-401", "hard_negatives": ["tr-cache-layer-ETIMEDOUT", "tr-vector-store-AUTH-401", "tr-eval-service-IDX-CORRUPT"]}
+{"query": "请问评估服务返回 AUTH-401 是什么原因，怎么修复", "gold_doc_id": "tr-eval-service-AUTH-401", "hard_negatives": ["tr-cache-layer-ETIMEDOUT", "tr-vector-store-AUTH-401", "tr-eval-service-IDX-CORRUPT"]}
+{"query": "评估服务返回 AUTH-401 是什么原因 并且 怎么修复", "gold_doc_id": "tr-eval-service-AUTH-401", "hard_negatives": ["tr-cache-layer-ETIMEDOUT", "tr-vector-store-AUTH-401", "tr-eval-service-IDX-CORRUPT"]}
+{"query": "评估服务返回 SCHEMA-MISMATCH 是什么原因，怎么修复", "gold_doc_id": "tr-eval-service-SCHEMA-MISMATCH", "hard_negatives": ["tr-vector-store-RATE-429", "tr-api-gateway-OOM-409", "tr-scheduler-OOM-409"]}
+{"query": "评估服务返回 SCHEMA-MISMATCH 是什么原因，怎么修复？", "gold_doc_id": "tr-eval-service-SCHEMA-MISMATCH", "hard_negatives": ["tr-vector-store-RATE-429", "tr-api-gateway-OOM-409", "tr-scheduler-OOM-409"]}
+{"query": "请问评估服务返回 SCHEMA-MISMATCH 是什么原因，怎么修复", "gold_doc_id": "tr-eval-service-SCHEMA-MISMATCH", "hard_negatives": ["tr-vector-store-RATE-429", "tr-api-gateway-OOM-409", "tr-scheduler-OOM-409"]}
+{"query": "评估服务返回 SCHEMA-MISMATCH 是什么原因 并且 怎么修复", "gold_doc_id": "tr-eval-service-SCHEMA-MISMATCH", "hard_negatives": ["tr-vector-store-RATE-429", "tr-api-gateway-OOM-409", "tr-scheduler-OOM-409"]}
+{"query": "ETIMEDOUT 错误码的根因和修复动作", "gold_doc_id": "tr-auth-service-ETIMEDOUT", "hard_negatives": ["tr-cache-layer-OOM-409", "tr-auth-service-ECONNREFUSED", "tr-trace-collector-SCHEMA-MISMATCH"]}
+{"query": "ETIMEDOUT 错误码的根因和修复动作？", "gold_doc_id": "tr-auth-service-ETIMEDOUT", "hard_negatives": ["tr-cache-layer-OOM-409", "tr-auth-service-ECONNREFUSED", "tr-trace-collector-SCHEMA-MISMATCH"]}
+{"query": "请问ETIMEDOUT 错误码的根因和修复动作", "gold_doc_id": "tr-auth-service-ETIMEDOUT", "hard_negatives": ["tr-cache-layer-OOM-409", "tr-auth-service-ECONNREFUSED", "tr-trace-collector-SCHEMA-MISMATCH"]}
+{"query": "ETIMEDOUT 错误码的根因和修复动作", "gold_doc_id": "tr-auth-service-ETIMEDOUT", "hard_negatives": ["tr-cache-layer-OOM-409", "tr-auth-service-ECONNREFUSED", "tr-trace-collector-SCHEMA-MISMATCH"]}
+{"query": "认证服务返回 ECONNREFUSED 是什么原因，怎么修复", "gold_doc_id": "tr-auth-service-ECONNREFUSED", "hard_negatives": ["tr-scheduler-RATE-429", "tr-vector-store-RATE-429", "tr-scheduler-ETIMEDOUT"]}
+{"query": "认证服务返回 ECONNREFUSED 是什么原因，怎么修复？", "gold_doc_id": "tr-auth-service-ECONNREFUSED", "hard_negatives": ["tr-scheduler-RATE-429", "tr-vector-store-RATE-429", "tr-scheduler-ETIMEDOUT"]}
+{"query": "请问认证服务返回 ECONNREFUSED 是什么原因，怎么修复", "gold_doc_id": "tr-auth-service-ECONNREFUSED", "hard_negatives": ["tr-scheduler-RATE-429", "tr-vector-store-RATE-429", "tr-scheduler-ETIMEDOUT"]}
+{"query": "认证服务返回 ECONNREFUSED 是什么原因 并且 怎么修复", "gold_doc_id": "tr-auth-service-ECONNREFUSED", "hard_negatives": ["tr-scheduler-RATE-429", "tr-vector-store-RATE-429", "tr-scheduler-ETIMEDOUT"]}
+{"query": "认证服务返回 OOM-409 是什么原因，怎么修复", "gold_doc_id": "tr-auth-service-OOM-409", "hard_negatives": ["tr-api-gateway-ECONNREFUSED", "tr-scheduler-RATE-429", "tr-eval-service-AUTH-401"]}
+{"query": "认证服务返回 OOM-409 是什么原因，怎么修复？", "gold_doc_id": "tr-auth-service-OOM-409", "hard_negatives": ["tr-api-gateway-ECONNREFUSED", "tr-scheduler-RATE-429", "tr-eval-service-AUTH-401"]}
+{"query": "请问认证服务返回 OOM-409 是什么原因，怎么修复", "gold_doc_id": "tr-auth-service-OOM-409", "hard_negatives": ["tr-api-gateway-ECONNREFUSED", "tr-scheduler-RATE-429", "tr-eval-service-AUTH-401"]}
+{"query": "认证服务返回 OOM-409 是什么原因 并且 怎么修复", "gold_doc_id": "tr-auth-service-OOM-409", "hard_negatives": ["tr-api-gateway-ECONNREFUSED", "tr-scheduler-RATE-429", "tr-eval-service-AUTH-401"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-auth-service-IDX-CORRUPT", "hard_negatives": ["tr-auth-service-RATE-429", "tr-vector-store-ECONNREFUSED", "tr-scheduler-ECONNREFUSED"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作？", "gold_doc_id": "tr-auth-service-IDX-CORRUPT", "hard_negatives": ["tr-auth-service-RATE-429", "tr-vector-store-ECONNREFUSED", "tr-scheduler-ECONNREFUSED"]}
+{"query": "请问IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-auth-service-IDX-CORRUPT", "hard_negatives": ["tr-auth-service-RATE-429", "tr-vector-store-ECONNREFUSED", "tr-scheduler-ECONNREFUSED"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-auth-service-IDX-CORRUPT", "hard_negatives": ["tr-auth-service-RATE-429", "tr-vector-store-ECONNREFUSED", "tr-scheduler-ECONNREFUSED"]}
+{"query": "auth-service 出现 RATE-429 的排查步骤是什么", "gold_doc_id": "tr-auth-service-RATE-429", "hard_negatives": ["tr-cache-layer-OOM-409", "tr-cache-layer-RATE-429", "tr-ingest-queue-OOM-409"]}
+{"query": "auth-service 出现 RATE-429 的排查步骤是什么？", "gold_doc_id": "tr-auth-service-RATE-429", "hard_negatives": ["tr-cache-layer-OOM-409", "tr-cache-layer-RATE-429", "tr-ingest-queue-OOM-409"]}
+{"query": "请问auth-service 出现 RATE-429 的排查步骤是什么", "gold_doc_id": "tr-auth-service-RATE-429", "hard_negatives": ["tr-cache-layer-OOM-409", "tr-cache-layer-RATE-429", "tr-ingest-queue-OOM-409"]}
+{"query": "auth-service 出现 RATE-429 的排查步骤是什么", "gold_doc_id": "tr-auth-service-RATE-429", "hard_negatives": ["tr-cache-layer-OOM-409", "tr-cache-layer-RATE-429", "tr-ingest-queue-OOM-409"]}
+{"query": "认证服务返回 AUTH-401 是什么原因，怎么修复", "gold_doc_id": "tr-auth-service-AUTH-401", "hard_negatives": ["tr-api-gateway-RATE-429", "tr-cache-layer-OOM-409", "tr-ingest-queue-IDX-CORRUPT"]}
+{"query": "认证服务返回 AUTH-401 是什么原因，怎么修复？", "gold_doc_id": "tr-auth-service-AUTH-401", "hard_negatives": ["tr-api-gateway-RATE-429", "tr-cache-layer-OOM-409", "tr-ingest-queue-IDX-CORRUPT"]}
+{"query": "请问认证服务返回 AUTH-401 是什么原因，怎么修复", "gold_doc_id": "tr-auth-service-AUTH-401", "hard_negatives": ["tr-api-gateway-RATE-429", "tr-cache-layer-OOM-409", "tr-ingest-queue-IDX-CORRUPT"]}
+{"query": "认证服务返回 AUTH-401 是什么原因 并且 怎么修复", "gold_doc_id": "tr-auth-service-AUTH-401", "hard_negatives": ["tr-api-gateway-RATE-429", "tr-cache-layer-OOM-409", "tr-ingest-queue-IDX-CORRUPT"]}
+{"query": "auth-service 出现 SCHEMA-MISMATCH 的排查步骤是什么", "gold_doc_id": "tr-auth-service-SCHEMA-MISMATCH", "hard_negatives": ["tr-scheduler-OOM-409", "tr-object-store-AUTH-401", "tr-auth-service-RATE-429"]}
+{"query": "auth-service 出现 SCHEMA-MISMATCH 的排查步骤是什么？", "gold_doc_id": "tr-auth-service-SCHEMA-MISMATCH", "hard_negatives": ["tr-scheduler-OOM-409", "tr-object-store-AUTH-401", "tr-auth-service-RATE-429"]}
+{"query": "请问auth-service 出现 SCHEMA-MISMATCH 的排查步骤是什么", "gold_doc_id": "tr-auth-service-SCHEMA-MISMATCH", "hard_negatives": ["tr-scheduler-OOM-409", "tr-object-store-AUTH-401", "tr-auth-service-RATE-429"]}
+{"query": "auth-service 出现 SCHEMA-MISMATCH 的排查步骤是什么", "gold_doc_id": "tr-auth-service-SCHEMA-MISMATCH", "hard_negatives": ["tr-scheduler-OOM-409", "tr-object-store-AUTH-401", "tr-auth-service-RATE-429"]}
+{"query": "scheduler 出现 ETIMEDOUT 的排查步骤是什么", "gold_doc_id": "tr-scheduler-ETIMEDOUT", "hard_negatives": ["tr-vector-store-RATE-429", "tr-cache-layer-IDX-CORRUPT", "tr-inference-runtime-AUTH-401"]}
+{"query": "scheduler 出现 ETIMEDOUT 的排查步骤是什么？", "gold_doc_id": "tr-scheduler-ETIMEDOUT", "hard_negatives": ["tr-vector-store-RATE-429", "tr-cache-layer-IDX-CORRUPT", "tr-inference-runtime-AUTH-401"]}
+{"query": "请问scheduler 出现 ETIMEDOUT 的排查步骤是什么", "gold_doc_id": "tr-scheduler-ETIMEDOUT", "hard_negatives": ["tr-vector-store-RATE-429", "tr-cache-layer-IDX-CORRUPT", "tr-inference-runtime-AUTH-401"]}
+{"query": "scheduler 出现 ETIMEDOUT 的排查步骤是什么", "gold_doc_id": "tr-scheduler-ETIMEDOUT", "hard_negatives": ["tr-vector-store-RATE-429", "tr-cache-layer-IDX-CORRUPT", "tr-inference-runtime-AUTH-401"]}
+{"query": "调度器返回 ECONNREFUSED 是什么原因，怎么修复", "gold_doc_id": "tr-scheduler-ECONNREFUSED", "hard_negatives": ["tr-cache-layer-ETIMEDOUT", "tr-eval-service-ETIMEDOUT", "tr-scheduler-ETIMEDOUT"]}
+{"query": "调度器返回 ECONNREFUSED 是什么原因，怎么修复？", "gold_doc_id": "tr-scheduler-ECONNREFUSED", "hard_negatives": ["tr-cache-layer-ETIMEDOUT", "tr-eval-service-ETIMEDOUT", "tr-scheduler-ETIMEDOUT"]}
+{"query": "请问调度器返回 ECONNREFUSED 是什么原因，怎么修复", "gold_doc_id": "tr-scheduler-ECONNREFUSED", "hard_negatives": ["tr-cache-layer-ETIMEDOUT", "tr-eval-service-ETIMEDOUT", "tr-scheduler-ETIMEDOUT"]}
+{"query": "调度器返回 ECONNREFUSED 是什么原因 并且 怎么修复", "gold_doc_id": "tr-scheduler-ECONNREFUSED", "hard_negatives": ["tr-cache-layer-ETIMEDOUT", "tr-eval-service-ETIMEDOUT", "tr-scheduler-ETIMEDOUT"]}
+{"query": "调度器返回 OOM-409 是什么原因，怎么修复", "gold_doc_id": "tr-scheduler-OOM-409", "hard_negatives": ["tr-trace-collector-SCHEMA-MISMATCH", "tr-api-gateway-ETIMEDOUT", "tr-inference-runtime-OOM-409"]}
+{"query": "调度器返回 OOM-409 是什么原因，怎么修复？", "gold_doc_id": "tr-scheduler-OOM-409", "hard_negatives": ["tr-trace-collector-SCHEMA-MISMATCH", "tr-api-gateway-ETIMEDOUT", "tr-inference-runtime-OOM-409"]}
+{"query": "请问调度器返回 OOM-409 是什么原因，怎么修复", "gold_doc_id": "tr-scheduler-OOM-409", "hard_negatives": ["tr-trace-collector-SCHEMA-MISMATCH", "tr-api-gateway-ETIMEDOUT", "tr-inference-runtime-OOM-409"]}
+{"query": "调度器返回 OOM-409 是什么原因 并且 怎么修复", "gold_doc_id": "tr-scheduler-OOM-409", "hard_negatives": ["tr-trace-collector-SCHEMA-MISMATCH", "tr-api-gateway-ETIMEDOUT", "tr-inference-runtime-OOM-409"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-scheduler-IDX-CORRUPT", "hard_negatives": ["tr-vector-store-ECONNREFUSED", "tr-ingest-queue-RATE-429", "tr-object-store-SCHEMA-MISMATCH"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作？", "gold_doc_id": "tr-scheduler-IDX-CORRUPT", "hard_negatives": ["tr-vector-store-ECONNREFUSED", "tr-ingest-queue-RATE-429", "tr-object-store-SCHEMA-MISMATCH"]}
+{"query": "请问IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-scheduler-IDX-CORRUPT", "hard_negatives": ["tr-vector-store-ECONNREFUSED", "tr-ingest-queue-RATE-429", "tr-object-store-SCHEMA-MISMATCH"]}
+{"query": "IDX-CORRUPT 错误码的根因和修复动作", "gold_doc_id": "tr-scheduler-IDX-CORRUPT", "hard_negatives": ["tr-vector-store-ECONNREFUSED", "tr-ingest-queue-RATE-429", "tr-object-store-SCHEMA-MISMATCH"]}
+{"query": "scheduler 出现 RATE-429 的排查步骤是什么", "gold_doc_id": "tr-scheduler-RATE-429", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-vector-store-RATE-429", "tr-object-store-RATE-429"]}
+{"query": "scheduler 出现 RATE-429 的排查步骤是什么？", "gold_doc_id": "tr-scheduler-RATE-429", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-vector-store-RATE-429", "tr-object-store-RATE-429"]}
+{"query": "请问scheduler 出现 RATE-429 的排查步骤是什么", "gold_doc_id": "tr-scheduler-RATE-429", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-vector-store-RATE-429", "tr-object-store-RATE-429"]}
+{"query": "scheduler 出现 RATE-429 的排查步骤是什么", "gold_doc_id": "tr-scheduler-RATE-429", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-vector-store-RATE-429", "tr-object-store-RATE-429"]}
+{"query": "scheduler 出现 AUTH-401 的排查步骤是什么", "gold_doc_id": "tr-scheduler-AUTH-401", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-ingest-queue-AUTH-401", "tr-object-store-IDX-CORRUPT"]}
+{"query": "scheduler 出现 AUTH-401 的排查步骤是什么？", "gold_doc_id": "tr-scheduler-AUTH-401", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-ingest-queue-AUTH-401", "tr-object-store-IDX-CORRUPT"]}
+{"query": "请问scheduler 出现 AUTH-401 的排查步骤是什么", "gold_doc_id": "tr-scheduler-AUTH-401", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-ingest-queue-AUTH-401", "tr-object-store-IDX-CORRUPT"]}
+{"query": "scheduler 出现 AUTH-401 的排查步骤是什么", "gold_doc_id": "tr-scheduler-AUTH-401", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-ingest-queue-AUTH-401", "tr-object-store-IDX-CORRUPT"]}
+{"query": "scheduler 出现 SCHEMA-MISMATCH 的排查步骤是什么", "gold_doc_id": "tr-scheduler-SCHEMA-MISMATCH", "hard_negatives": ["tr-api-gateway-AUTH-401", "tr-vector-store-OOM-409", "tr-cache-layer-ETIMEDOUT"]}
+{"query": "scheduler 出现 SCHEMA-MISMATCH 的排查步骤是什么？", "gold_doc_id": "tr-scheduler-SCHEMA-MISMATCH", "hard_negatives": ["tr-api-gateway-AUTH-401", "tr-vector-store-OOM-409", "tr-cache-layer-ETIMEDOUT"]}
+{"query": "请问scheduler 出现 SCHEMA-MISMATCH 的排查步骤是什么", "gold_doc_id": "tr-scheduler-SCHEMA-MISMATCH", "hard_negatives": ["tr-api-gateway-AUTH-401", "tr-vector-store-OOM-409", "tr-cache-layer-ETIMEDOUT"]}
+{"query": "scheduler 出现 SCHEMA-MISMATCH 的排查步骤是什么", "gold_doc_id": "tr-scheduler-SCHEMA-MISMATCH", "hard_negatives": ["tr-api-gateway-AUTH-401", "tr-vector-store-OOM-409", "tr-cache-layer-ETIMEDOUT"]}
+{"query": "ETIMEDOUT 错误码的根因和修复动作", "gold_doc_id": "tr-cache-layer-ETIMEDOUT", "hard_negatives": ["tr-ingest-queue-OOM-409", "tr-inference-runtime-AUTH-401", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "ETIMEDOUT 错误码的根因和修复动作？", "gold_doc_id": "tr-cache-layer-ETIMEDOUT", "hard_negatives": ["tr-ingest-queue-OOM-409", "tr-inference-runtime-AUTH-401", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "请问ETIMEDOUT 错误码的根因和修复动作", "gold_doc_id": "tr-cache-layer-ETIMEDOUT", "hard_negatives": ["tr-ingest-queue-OOM-409", "tr-inference-runtime-AUTH-401", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "ETIMEDOUT 错误码的根因和修复动作", "gold_doc_id": "tr-cache-layer-ETIMEDOUT", "hard_negatives": ["tr-ingest-queue-OOM-409", "tr-inference-runtime-AUTH-401", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "缓存层返回 ECONNREFUSED 是什么原因，怎么修复", "gold_doc_id": "tr-cache-layer-ECONNREFUSED", "hard_negatives": ["tr-cache-layer-SCHEMA-MISMATCH", "tr-api-gateway-SCHEMA-MISMATCH", "tr-scheduler-AUTH-401"]}
+{"query": "缓存层返回 ECONNREFUSED 是什么原因，怎么修复？", "gold_doc_id": "tr-cache-layer-ECONNREFUSED", "hard_negatives": ["tr-cache-layer-SCHEMA-MISMATCH", "tr-api-gateway-SCHEMA-MISMATCH", "tr-scheduler-AUTH-401"]}
+{"query": "请问缓存层返回 ECONNREFUSED 是什么原因，怎么修复", "gold_doc_id": "tr-cache-layer-ECONNREFUSED", "hard_negatives": ["tr-cache-layer-SCHEMA-MISMATCH", "tr-api-gateway-SCHEMA-MISMATCH", "tr-scheduler-AUTH-401"]}
+{"query": "缓存层返回 ECONNREFUSED 是什么原因 并且 怎么修复", "gold_doc_id": "tr-cache-layer-ECONNREFUSED", "hard_negatives": ["tr-cache-layer-SCHEMA-MISMATCH", "tr-api-gateway-SCHEMA-MISMATCH", "tr-scheduler-AUTH-401"]}
+{"query": "OOM-409 错误码的根因和修复动作", "gold_doc_id": "tr-cache-layer-OOM-409", "hard_negatives": ["tr-trace-collector-OOM-409", "tr-cache-layer-AUTH-401", "tr-object-store-OOM-409"]}
+{"query": "OOM-409 错误码的根因和修复动作？", "gold_doc_id": "tr-cache-layer-OOM-409", "hard_negatives": ["tr-trace-collector-OOM-409", "tr-cache-layer-AUTH-401", "tr-object-store-OOM-409"]}
+{"query": "请问OOM-409 错误码的根因和修复动作", "gold_doc_id": "tr-cache-layer-OOM-409", "hard_negatives": ["tr-trace-collector-OOM-409", "tr-cache-layer-AUTH-401", "tr-object-store-OOM-409"]}
+{"query": "OOM-409 错误码的根因和修复动作", "gold_doc_id": "tr-cache-layer-OOM-409", "hard_negatives": ["tr-trace-collector-OOM-409", "tr-cache-layer-AUTH-401", "tr-object-store-OOM-409"]}
+{"query": "cache-layer 出现 IDX-CORRUPT 的排查步骤是什么", "gold_doc_id": "tr-cache-layer-IDX-CORRUPT", "hard_negatives": ["tr-cache-layer-RATE-429", "tr-vector-store-SCHEMA-MISMATCH", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "cache-layer 出现 IDX-CORRUPT 的排查步骤是什么？", "gold_doc_id": "tr-cache-layer-IDX-CORRUPT", "hard_negatives": ["tr-cache-layer-RATE-429", "tr-vector-store-SCHEMA-MISMATCH", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "请问cache-layer 出现 IDX-CORRUPT 的排查步骤是什么", "gold_doc_id": "tr-cache-layer-IDX-CORRUPT", "hard_negatives": ["tr-cache-layer-RATE-429", "tr-vector-store-SCHEMA-MISMATCH", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "cache-layer 出现 IDX-CORRUPT 的排查步骤是什么", "gold_doc_id": "tr-cache-layer-IDX-CORRUPT", "hard_negatives": ["tr-cache-layer-RATE-429", "tr-vector-store-SCHEMA-MISMATCH", "tr-scheduler-SCHEMA-MISMATCH"]}
+{"query": "缓存层返回 RATE-429 是什么原因，怎么修复", "gold_doc_id": "tr-cache-layer-RATE-429", "hard_negatives": ["tr-trace-collector-IDX-CORRUPT", "tr-object-store-AUTH-401", "tr-vector-store-ECONNREFUSED"]}
+{"query": "缓存层返回 RATE-429 是什么原因，怎么修复？", "gold_doc_id": "tr-cache-layer-RATE-429", "hard_negatives": ["tr-trace-collector-IDX-CORRUPT", "tr-object-store-AUTH-401", "tr-vector-store-ECONNREFUSED"]}
+{"query": "请问缓存层返回 RATE-429 是什么原因，怎么修复", "gold_doc_id": "tr-cache-layer-RATE-429", "hard_negatives": ["tr-trace-collector-IDX-CORRUPT", "tr-object-store-AUTH-401", "tr-vector-store-ECONNREFUSED"]}
+{"query": "缓存层返回 RATE-429 是什么原因 并且 怎么修复", "gold_doc_id": "tr-cache-layer-RATE-429", "hard_negatives": ["tr-trace-collector-IDX-CORRUPT", "tr-object-store-AUTH-401", "tr-vector-store-ECONNREFUSED"]}
+{"query": "AUTH-401 错误码的根因和修复动作", "gold_doc_id": "tr-cache-layer-AUTH-401", "hard_negatives": ["tr-eval-service-AUTH-401", "tr-api-gateway-RATE-429", "tr-scheduler-OOM-409"]}
+{"query": "AUTH-401 错误码的根因和修复动作？", "gold_doc_id": "tr-cache-layer-AUTH-401", "hard_negatives": ["tr-eval-service-AUTH-401", "tr-api-gateway-RATE-429", "tr-scheduler-OOM-409"]}
+{"query": "请问AUTH-401 错误码的根因和修复动作", "gold_doc_id": "tr-cache-layer-AUTH-401", "hard_negatives": ["tr-eval-service-AUTH-401", "tr-api-gateway-RATE-429", "tr-scheduler-OOM-409"]}
+{"query": "AUTH-401 错误码的根因和修复动作", "gold_doc_id": "tr-cache-layer-AUTH-401", "hard_negatives": ["tr-eval-service-AUTH-401", "tr-api-gateway-RATE-429", "tr-scheduler-OOM-409"]}
+{"query": "cache-layer 出现 SCHEMA-MISMATCH 的排查步骤是什么", "gold_doc_id": "tr-cache-layer-SCHEMA-MISMATCH", "hard_negatives": ["tr-vector-store-ETIMEDOUT", "tr-scheduler-AUTH-401", "tr-inference-runtime-ECONNREFUSED"]}
+{"query": "cache-layer 出现 SCHEMA-MISMATCH 的排查步骤是什么？", "gold_doc_id": "tr-cache-layer-SCHEMA-MISMATCH", "hard_negatives": ["tr-vector-store-ETIMEDOUT", "tr-scheduler-AUTH-401", "tr-inference-runtime-ECONNREFUSED"]}
+{"query": "请问cache-layer 出现 SCHEMA-MISMATCH 的排查步骤是什么", "gold_doc_id": "tr-cache-layer-SCHEMA-MISMATCH", "hard_negatives": ["tr-vector-store-ETIMEDOUT", "tr-scheduler-AUTH-401", "tr-inference-runtime-ECONNREFUSED"]}
+{"query": "cache-layer 出现 SCHEMA-MISMATCH 的排查步骤是什么", "gold_doc_id": "tr-cache-layer-SCHEMA-MISMATCH", "hard_negatives": ["tr-vector-store-ETIMEDOUT", "tr-scheduler-AUTH-401", "tr-inference-runtime-ECONNREFUSED"]}
+{"query": "ETIMEDOUT 错误码的根因和修复动作", "gold_doc_id": "tr-object-store-ETIMEDOUT", "hard_negatives": ["tr-scheduler-ECONNREFUSED", "tr-cache-layer-IDX-CORRUPT", "tr-vector-store-SCHEMA-MISMATCH"]}
+{"query": "ETIMEDOUT 错误码的根因和修复动作？", "gold_doc_id": "tr-object-store-ETIMEDOUT", "hard_negatives": ["tr-scheduler-ECONNREFUSED", "tr-cache-layer-IDX-CORRUPT", "tr-vector-store-SCHEMA-MISMATCH"]}
+{"query": "请问ETIMEDOUT 错误码的根因和修复动作", "gold_doc_id": "tr-object-store-ETIMEDOUT", "hard_negatives": ["tr-scheduler-ECONNREFUSED", "tr-cache-layer-IDX-CORRUPT", "tr-vector-store-SCHEMA-MISMATCH"]}
+{"query": "ETIMEDOUT 错误码的根因和修复动作", "gold_doc_id": "tr-object-store-ETIMEDOUT", "hard_negatives": ["tr-scheduler-ECONNREFUSED", "tr-cache-layer-IDX-CORRUPT", "tr-vector-store-SCHEMA-MISMATCH"]}
+{"query": "object-store 出现 ECONNREFUSED 的排查步骤是什么", "gold_doc_id": "tr-object-store-ECONNREFUSED", "hard_negatives": ["tr-trace-collector-ECONNREFUSED", "tr-api-gateway-IDX-CORRUPT", "tr-cache-layer-OOM-409"]}
+{"query": "object-store 出现 ECONNREFUSED 的排查步骤是什么？", "gold_doc_id": "tr-object-store-ECONNREFUSED", "hard_negatives": ["tr-trace-collector-ECONNREFUSED", "tr-api-gateway-IDX-CORRUPT", "tr-cache-layer-OOM-409"]}
+{"query": "请问object-store 出现 ECONNREFUSED 的排查步骤是什么", "gold_doc_id": "tr-object-store-ECONNREFUSED", "hard_negatives": ["tr-trace-collector-ECONNREFUSED", "tr-api-gateway-IDX-CORRUPT", "tr-cache-layer-OOM-409"]}
+{"query": "object-store 出现 ECONNREFUSED 的排查步骤是什么", "gold_doc_id": "tr-object-store-ECONNREFUSED", "hard_negatives": ["tr-trace-collector-ECONNREFUSED", "tr-api-gateway-IDX-CORRUPT", "tr-cache-layer-OOM-409"]}
+{"query": "对象存储返回 OOM-409 是什么原因，怎么修复", "gold_doc_id": "tr-object-store-OOM-409", "hard_negatives": ["tr-scheduler-AUTH-401", "tr-ingest-queue-RATE-429", "tr-ingest-queue-SCHEMA-MISMATCH"]}
+{"query": "对象存储返回 OOM-409 是什么原因，怎么修复？", "gold_doc_id": "tr-object-store-OOM-409", "hard_negatives": ["tr-scheduler-AUTH-401", "tr-ingest-queue-RATE-429", "tr-ingest-queue-SCHEMA-MISMATCH"]}
+{"query": "请问对象存储返回 OOM-409 是什么原因，怎么修复", "gold_doc_id": "tr-object-store-OOM-409", "hard_negatives": ["tr-scheduler-AUTH-401", "tr-ingest-queue-RATE-429", "tr-ingest-queue-SCHEMA-MISMATCH"]}
+{"query": "对象存储返回 OOM-409 是什么原因 并且 怎么修复", "gold_doc_id": "tr-object-store-OOM-409", "hard_negatives": ["tr-scheduler-AUTH-401", "tr-ingest-queue-RATE-429", "tr-ingest-queue-SCHEMA-MISMATCH"]}
+{"query": "对象存储返回 IDX-CORRUPT 是什么原因，怎么修复", "gold_doc_id": "tr-object-store-IDX-CORRUPT", "hard_negatives": ["tr-auth-service-IDX-CORRUPT", "tr-ingest-queue-OOM-409", "tr-scheduler-ECONNREFUSED"]}
+{"query": "对象存储返回 IDX-CORRUPT 是什么原因，怎么修复？", "gold_doc_id": "tr-object-store-IDX-CORRUPT", "hard_negatives": ["tr-auth-service-IDX-CORRUPT", "tr-ingest-queue-OOM-409", "tr-scheduler-ECONNREFUSED"]}
+{"query": "请问对象存储返回 IDX-CORRUPT 是什么原因，怎么修复", "gold_doc_id": "tr-object-store-IDX-CORRUPT", "hard_negatives": ["tr-auth-service-IDX-CORRUPT", "tr-ingest-queue-OOM-409", "tr-scheduler-ECONNREFUSED"]}
+{"query": "对象存储返回 IDX-CORRUPT 是什么原因 并且 怎么修复", "gold_doc_id": "tr-object-store-IDX-CORRUPT", "hard_negatives": ["tr-auth-service-IDX-CORRUPT", "tr-ingest-queue-OOM-409", "tr-scheduler-ECONNREFUSED"]}
+{"query": "object-store 出现 RATE-429 的排查步骤是什么", "gold_doc_id": "tr-object-store-RATE-429", "hard_negatives": ["tr-scheduler-AUTH-401", "tr-cache-layer-AUTH-401", "tr-vector-store-RATE-429"]}
+{"query": "object-store 出现 RATE-429 的排查步骤是什么？", "gold_doc_id": "tr-object-store-RATE-429", "hard_negatives": ["tr-scheduler-AUTH-401", "tr-cache-layer-AUTH-401", "tr-vector-store-RATE-429"]}
+{"query": "请问object-store 出现 RATE-429 的排查步骤是什么", "gold_doc_id": "tr-object-store-RATE-429", "hard_negatives": ["tr-scheduler-AUTH-401", "tr-cache-layer-AUTH-401", "tr-vector-store-RATE-429"]}
+{"query": "object-store 出现 RATE-429 的排查步骤是什么", "gold_doc_id": "tr-object-store-RATE-429", "hard_negatives": ["tr-scheduler-AUTH-401", "tr-cache-layer-AUTH-401", "tr-vector-store-RATE-429"]}
+{"query": "AUTH-401 错误码的根因和修复动作", "gold_doc_id": "tr-object-store-AUTH-401", "hard_negatives": ["tr-cache-layer-ECONNREFUSED", "tr-vector-store-OOM-409", "tr-scheduler-ETIMEDOUT"]}
+{"query": "AUTH-401 错误码的根因和修复动作？", "gold_doc_id": "tr-object-store-AUTH-401", "hard_negatives": ["tr-cache-layer-ECONNREFUSED", "tr-vector-store-OOM-409", "tr-scheduler-ETIMEDOUT"]}
+{"query": "请问AUTH-401 错误码的根因和修复动作", "gold_doc_id": "tr-object-store-AUTH-401", "hard_negatives": ["tr-cache-layer-ECONNREFUSED", "tr-vector-store-OOM-409", "tr-scheduler-ETIMEDOUT"]}
+{"query": "AUTH-401 错误码的根因和修复动作", "gold_doc_id": "tr-object-store-AUTH-401", "hard_negatives": ["tr-cache-layer-ECONNREFUSED", "tr-vector-store-OOM-409", "tr-scheduler-ETIMEDOUT"]}
+{"query": "SCHEMA-MISMATCH 错误码的根因和修复动作", "gold_doc_id": "tr-object-store-SCHEMA-MISMATCH", "hard_negatives": ["tr-ingest-queue-AUTH-401", "tr-ingest-queue-ECONNREFUSED", "tr-object-store-OOM-409"]}
+{"query": "SCHEMA-MISMATCH 错误码的根因和修复动作？", "gold_doc_id": "tr-object-store-SCHEMA-MISMATCH", "hard_negatives": ["tr-ingest-queue-AUTH-401", "tr-ingest-queue-ECONNREFUSED", "tr-object-store-OOM-409"]}
+{"query": "请问SCHEMA-MISMATCH 错误码的根因和修复动作", "gold_doc_id": "tr-object-store-SCHEMA-MISMATCH", "hard_negatives": ["tr-ingest-queue-AUTH-401", "tr-ingest-queue-ECONNREFUSED", "tr-object-store-OOM-409"]}
+{"query": "SCHEMA-MISMATCH 错误码的根因和修复动作", "gold_doc_id": "tr-object-store-SCHEMA-MISMATCH", "hard_negatives": ["tr-ingest-queue-AUTH-401", "tr-ingest-queue-ECONNREFUSED", "tr-object-store-OOM-409"]}
+{"query": "链路采集器返回 ETIMEDOUT 是什么原因，怎么修复", "gold_doc_id": "tr-trace-collector-ETIMEDOUT", "hard_negatives": ["tr-scheduler-RATE-429", "tr-auth-service-OOM-409", "tr-api-gateway-ECONNREFUSED"]}
+{"query": "链路采集器返回 ETIMEDOUT 是什么原因，怎么修复？", "gold_doc_id": "tr-trace-collector-ETIMEDOUT", "hard_negatives": ["tr-scheduler-RATE-429", "tr-auth-service-OOM-409", "tr-api-gateway-ECONNREFUSED"]}
+{"query": "请问链路采集器返回 ETIMEDOUT 是什么原因，怎么修复", "gold_doc_id": "tr-trace-collector-ETIMEDOUT", "hard_negatives": ["tr-scheduler-RATE-429", "tr-auth-service-OOM-409", "tr-api-gateway-ECONNREFUSED"]}
+{"query": "链路采集器返回 ETIMEDOUT 是什么原因 并且 怎么修复", "gold_doc_id": "tr-trace-collector-ETIMEDOUT", "hard_negatives": ["tr-scheduler-RATE-429", "tr-auth-service-OOM-409", "tr-api-gateway-ECONNREFUSED"]}
+{"query": "链路采集器返回 ECONNREFUSED 是什么原因，怎么修复", "gold_doc_id": "tr-trace-collector-ECONNREFUSED", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-inference-runtime-ECONNREFUSED", "tr-cache-layer-IDX-CORRUPT"]}
+{"query": "链路采集器返回 ECONNREFUSED 是什么原因，怎么修复？", "gold_doc_id": "tr-trace-collector-ECONNREFUSED", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-inference-runtime-ECONNREFUSED", "tr-cache-layer-IDX-CORRUPT"]}
+{"query": "请问链路采集器返回 ECONNREFUSED 是什么原因，怎么修复", "gold_doc_id": "tr-trace-collector-ECONNREFUSED", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-inference-runtime-ECONNREFUSED", "tr-cache-layer-IDX-CORRUPT"]}
+{"query": "链路采集器返回 ECONNREFUSED 是什么原因 并且 怎么修复", "gold_doc_id": "tr-trace-collector-ECONNREFUSED", "hard_negatives": ["tr-scheduler-IDX-CORRUPT", "tr-inference-runtime-ECONNREFUSED", "tr-cache-layer-IDX-CORRUPT"]}
+{"query": "trace-collector 出现 OOM-409 的排查步骤是什么", "gold_doc_id": "tr-trace-collector-OOM-409", "hard_negatives": ["tr-ingest-queue-SCHEMA-MISMATCH", "tr-ingest-queue-IDX-CORRUPT", "tr-vector-store-IDX-CORRUPT"]}
+{"query": "trace-collector 出现 OOM-409 的排查步骤是什么？", "gold_doc_id": "tr-trace-collector-OOM-409", "hard_negatives": ["tr-ingest-queue-SCHEMA-MISMATCH", "tr-ingest-queue-IDX-CORRUPT", "tr-vector-store-IDX-CORRUPT"]}
+{"query": "请问trace-collector 出现 OOM-409 的排查步骤是什么", "gold_doc_id": "tr-trace-collector-OOM-409", "hard_negatives": ["tr-ingest-queue-SCHEMA-MISMATCH", "tr-ingest-queue-IDX-CORRUPT", "tr-vector-store-IDX-CORRUPT"]}
+{"query": "trace-collector 出现 OOM-409 的排查步骤是什么", "gold_doc_id": "tr-trace-collector-OOM-409", "hard_negatives": ["tr-ingest-queue-SCHEMA-MISMATCH", "tr-ingest-queue-IDX-CORRUPT", "tr-vector-store-IDX-CORRUPT"]}
+{"query": "trace-collector 出现 IDX-CORRUPT 的排查步骤是什么", "gold_doc_id": "tr-trace-collector-IDX-CORRUPT", "hard_negatives": ["tr-inference-runtime-OOM-409", "tr-trace-collector-AUTH-401", "tr-inference-runtime-ECONNREFUSED"]}
+{"query": "trace-collector 出现 IDX-CORRUPT 的排查步骤是什么？", "gold_doc_id": "tr-trace-collector-IDX-CORRUPT", "hard_negatives": ["tr-inference-runtime-OOM-409", "tr-trace-collector-AUTH-401", "tr-inference-runtime-ECONNREFUSED"]}
+{"query": "请问trace-collector 出现 IDX-CORRUPT 的排查步骤是什么", "gold_doc_id": "tr-trace-collector-IDX-CORRUPT", "hard_negatives": ["tr-inference-runtime-OOM-409", "tr-trace-collector-AUTH-401", "tr-inference-runtime-ECONNREFUSED"]}
+{"query": "trace-collector 出现 IDX-CORRUPT 的排查步骤是什么", "gold_doc_id": "tr-trace-collector-IDX-CORRUPT", "hard_negatives": ["tr-inference-runtime-OOM-409", "tr-trace-collector-AUTH-401", "tr-inference-runtime-ECONNREFUSED"]}
+{"query": "trace-collector 出现 RATE-429 的排查步骤是什么", "gold_doc_id": "tr-trace-collector-RATE-429", "hard_negatives": ["tr-auth-service-ETIMEDOUT", "tr-scheduler-AUTH-401", "tr-trace-collector-SCHEMA-MISMATCH"]}
+{"query": "trace-collector 出现 RATE-429 的排查步骤是什么？", "gold_doc_id": "tr-trace-collector-RATE-429", "hard_negatives": ["tr-auth-service-ETIMEDOUT", "tr-scheduler-AUTH-401", "tr-trace-collector-SCHEMA-MISMATCH"]}
+{"query": "请问trace-collector 出现 RATE-429 的排查步骤是什么", "gold_doc_id": "tr-trace-collector-RATE-429", "hard_negatives": ["tr-auth-service-ETIMEDOUT", "tr-scheduler-AUTH-401", "tr-trace-collector-SCHEMA-MISMATCH"]}
+{"query": "trace-collector 出现 RATE-429 的排查步骤是什么", "gold_doc_id": "tr-trace-collector-RATE-429", "hard_negatives": ["tr-auth-service-ETIMEDOUT", "tr-scheduler-AUTH-401", "tr-trace-collector-SCHEMA-MISMATCH"]}
+{"query": "链路采集器返回 AUTH-401 是什么原因，怎么修复", "gold_doc_id": "tr-trace-collector-AUTH-401", "hard_negatives": ["tr-object-store-SCHEMA-MISMATCH", "tr-api-gateway-ECONNREFUSED", "tr-auth-service-RATE-429"]}
+{"query": "链路采集器返回 AUTH-401 是什么原因，怎么修复？", "gold_doc_id": "tr-trace-collector-AUTH-401", "hard_negatives": ["tr-object-store-SCHEMA-MISMATCH", "tr-api-gateway-ECONNREFUSED", "tr-auth-service-RATE-429"]}
+{"query": "请问链路采集器返回 AUTH-401 是什么原因，怎么修复", "gold_doc_id": "tr-trace-collector-AUTH-401", "hard_negatives": ["tr-object-store-SCHEMA-MISMATCH", "tr-api-gateway-ECONNREFUSED", "tr-auth-service-RATE-429"]}
+{"query": "链路采集器返回 AUTH-401 是什么原因 并且 怎么修复", "gold_doc_id": "tr-trace-collector-AUTH-401", "hard_negatives": ["tr-object-store-SCHEMA-MISMATCH", "tr-api-gateway-ECONNREFUSED", "tr-auth-service-RATE-429"]}
+{"query": "链路采集器返回 SCHEMA-MISMATCH 是什么原因，怎么修复", "gold_doc_id": "tr-trace-collector-SCHEMA-MISMATCH", "hard_negatives": ["tr-trace-collector-ETIMEDOUT", "tr-scheduler-OOM-409", "tr-inference-runtime-OOM-409"]}
+{"query": "链路采集器返回 SCHEMA-MISMATCH 是什么原因，怎么修复？", "gold_doc_id": "tr-trace-collector-SCHEMA-MISMATCH", "hard_negatives": ["tr-trace-collector-ETIMEDOUT", "tr-scheduler-OOM-409", "tr-inference-runtime-OOM-409"]}
+{"query": "请问链路采集器返回 SCHEMA-MISMATCH 是什么原因，怎么修复", "gold_doc_id": "tr-trace-collector-SCHEMA-MISMATCH", "hard_negatives": ["tr-trace-collector-ETIMEDOUT", "tr-scheduler-OOM-409", "tr-inference-runtime-OOM-409"]}
+{"query": "链路采集器返回 SCHEMA-MISMATCH 是什么原因 并且 怎么修复", "gold_doc_id": "tr-trace-collector-SCHEMA-MISMATCH", "hard_negatives": ["tr-trace-collector-ETIMEDOUT", "tr-scheduler-OOM-409", "tr-inference-runtime-OOM-409"]}
+{"query": "怎么修改 max_seq", "gold_doc_id": "cf-max_seq", "hard_negatives": ["cf-similarity_threshold", "cf-cache_ttl_sec", "cf-rerank_depth"]}
+{"query": "怎么修改 max_seq？", "gold_doc_id": "cf-max_seq", "hard_negatives": ["cf-similarity_threshold", "cf-cache_ttl_sec", "cf-rerank_depth"]}
+{"query": "请问怎么修改 max_seq", "gold_doc_id": "cf-max_seq", "hard_negatives": ["cf-similarity_threshold", "cf-cache_ttl_sec", "cf-rerank_depth"]}
+{"query": "怎么修改 max_seq", "gold_doc_id": "cf-max_seq", "hard_negatives": ["cf-similarity_threshold", "cf-cache_ttl_sec", "cf-rerank_depth"]}
+{"query": "怎么修改 top_k", "gold_doc_id": "cf-top_k", "hard_negatives": ["cf-max_seq", "cf-thread_count", "cf-cache_ttl_sec"]}
+{"query": "怎么修改 top_k？", "gold_doc_id": "cf-top_k", "hard_negatives": ["cf-max_seq", "cf-thread_count", "cf-cache_ttl_sec"]}
+{"query": "请问怎么修改 top_k", "gold_doc_id": "cf-top_k", "hard_negatives": ["cf-max_seq", "cf-thread_count", "cf-cache_ttl_sec"]}
+{"query": "怎么修改 top_k", "gold_doc_id": "cf-top_k", "hard_negatives": ["cf-max_seq", "cf-thread_count", "cf-cache_ttl_sec"]}
+{"query": "怎么修改 batch_size", "gold_doc_id": "cf-batch_size", "hard_negatives": ["cf-max_seq", "cf-rerank_depth", "cf-top_k"]}
+{"query": "怎么修改 batch_size？", "gold_doc_id": "cf-batch_size", "hard_negatives": ["cf-max_seq", "cf-rerank_depth", "cf-top_k"]}
+{"query": "请问怎么修改 batch_size", "gold_doc_id": "cf-batch_size", "hard_negatives": ["cf-max_seq", "cf-rerank_depth", "cf-top_k"]}
+{"query": "怎么修改 batch_size", "gold_doc_id": "cf-batch_size", "hard_negatives": ["cf-max_seq", "cf-rerank_depth", "cf-top_k"]}
+{"query": "调整 cache_ttl_sec 会有什么影响", "gold_doc_id": "cf-cache_ttl_sec", "hard_negatives": ["cf-similarity_threshold", "cf-rerank_depth", "cf-thread_count"]}
+{"query": "调整 cache_ttl_sec 会有什么影响？", "gold_doc_id": "cf-cache_ttl_sec", "hard_negatives": ["cf-similarity_threshold", "cf-rerank_depth", "cf-thread_count"]}
+{"query": "请问调整 cache_ttl_sec 会有什么影响", "gold_doc_id": "cf-cache_ttl_sec", "hard_negatives": ["cf-similarity_threshold", "cf-rerank_depth", "cf-thread_count"]}
+{"query": "调整 cache_ttl_sec 会有什么影响", "gold_doc_id": "cf-cache_ttl_sec", "hard_negatives": ["cf-similarity_threshold", "cf-rerank_depth", "cf-thread_count"]}
+{"query": "调整 thread_count 会有什么影响", "gold_doc_id": "cf-thread_count", "hard_negatives": ["cf-cache_ttl_sec", "cf-similarity_threshold", "cf-batch_size"]}
+{"query": "调整 thread_count 会有什么影响？", "gold_doc_id": "cf-thread_count", "hard_negatives": ["cf-cache_ttl_sec", "cf-similarity_threshold", "cf-batch_size"]}
+{"query": "请问调整 thread_count 会有什么影响", "gold_doc_id": "cf-thread_count", "hard_negatives": ["cf-cache_ttl_sec", "cf-similarity_threshold", "cf-batch_size"]}
+{"query": "调整 thread_count 会有什么影响", "gold_doc_id": "cf-thread_count", "hard_negatives": ["cf-cache_ttl_sec", "cf-similarity_threshold", "cf-batch_size"]}
+{"query": "调整 similarity_threshold 会有什么影响", "gold_doc_id": "cf-similarity_threshold", "hard_negatives": ["cf-max_seq", "cf-thread_count", "cf-cache_ttl_sec"]}
+{"query": "调整 similarity_threshold 会有什么影响？", "gold_doc_id": "cf-similarity_threshold", "hard_negatives": ["cf-max_seq", "cf-thread_count", "cf-cache_ttl_sec"]}
+{"query": "请问调整 similarity_threshold 会有什么影响", "gold_doc_id": "cf-similarity_threshold", "hard_negatives": ["cf-max_seq", "cf-thread_count", "cf-cache_ttl_sec"]}
+{"query": "调整 similarity_threshold 会有什么影响", "gold_doc_id": "cf-similarity_threshold", "hard_negatives": ["cf-max_seq", "cf-thread_count", "cf-cache_ttl_sec"]}
+{"query": "怎么修改 chunk_size", "gold_doc_id": "cf-chunk_size", "hard_negatives": ["cf-max_seq", "cf-cache_ttl_sec", "cf-top_k"]}
+{"query": "怎么修改 chunk_size？", "gold_doc_id": "cf-chunk_size", "hard_negatives": ["cf-max_seq", "cf-cache_ttl_sec", "cf-top_k"]}
+{"query": "请问怎么修改 chunk_size", "gold_doc_id": "cf-chunk_size", "hard_negatives": ["cf-max_seq", "cf-cache_ttl_sec", "cf-top_k"]}
+{"query": "怎么修改 chunk_size", "gold_doc_id": "cf-chunk_size", "hard_negatives": ["cf-max_seq", "cf-cache_ttl_sec", "cf-top_k"]}
+{"query": "配置项 rerank_depth 的默认值和取值范围是多少", "gold_doc_id": "cf-rerank_depth", "hard_negatives": ["cf-batch_size", "cf-max_seq", "cf-top_k"]}
+{"query": "配置项 rerank_depth 的默认值和取值范围是多少？", "gold_doc_id": "cf-rerank_depth", "hard_negatives": ["cf-batch_size", "cf-max_seq", "cf-top_k"]}
+{"query": "请问配置项 rerank_depth 的默认值和取值范围是多少", "gold_doc_id": "cf-rerank_depth", "hard_negatives": ["cf-batch_size", "cf-max_seq", "cf-top_k"]}
+{"query": "配置项 rerank_depth 的默认值和取值范围是多少", "gold_doc_id": "cf-rerank_depth", "hard_negatives": ["cf-batch_size", "cf-max_seq", "cf-top_k"]}
+{"query": "重建向量索引的验收标准是什么", "gold_doc_id": "rb-重建向量索引", "hard_negatives": ["rb-扩容推理运行时", "rb-清理过期会话数据", "rb-回滚一次失败发布"]}
+{"query": "重建向量索引的验收标准是什么？", "gold_doc_id": "rb-重建向量索引", "hard_negatives": ["rb-扩容推理运行时", "rb-清理过期会话数据", "rb-回滚一次失败发布"]}
+{"query": "请问重建向量索引的验收标准是什么", "gold_doc_id": "rb-重建向量索引", "hard_negatives": ["rb-扩容推理运行时", "rb-清理过期会话数据", "rb-回滚一次失败发布"]}
+{"query": "重建向量索引的验收标准是什么", "gold_doc_id": "rb-重建向量索引", "hard_negatives": ["rb-扩容推理运行时", "rb-清理过期会话数据", "rb-回滚一次失败发布"]}
+{"query": "回滚一次失败发布的具体步骤是什么", "gold_doc_id": "rb-回滚一次失败发布", "hard_negatives": ["rb-重建向量索引", "rb-清理过期会话数据", "rb-开启 int8 量化推理"]}
+{"query": "回滚一次失败发布的具体步骤是什么？", "gold_doc_id": "rb-回滚一次失败发布", "hard_negatives": ["rb-重建向量索引", "rb-清理过期会话数据", "rb-开启 int8 量化推理"]}
+{"query": "请问回滚一次失败发布的具体步骤是什么", "gold_doc_id": "rb-回滚一次失败发布", "hard_negatives": ["rb-重建向量索引", "rb-清理过期会话数据", "rb-开启 int8 量化推理"]}
+{"query": "回滚一次失败发布的具体步骤是什么", "gold_doc_id": "rb-回滚一次失败发布", "hard_negatives": ["rb-重建向量索引", "rb-清理过期会话数据", "rb-开启 int8 量化推理"]}
+{"query": "如何执行扩容推理运行时", "gold_doc_id": "rb-扩容推理运行时", "hard_negatives": ["rb-清理过期会话数据", "rb-开启 int8 量化推理", "rb-重建向量索引"]}
+{"query": "如何执行扩容推理运行时？", "gold_doc_id": "rb-扩容推理运行时", "hard_negatives": ["rb-清理过期会话数据", "rb-开启 int8 量化推理", "rb-重建向量索引"]}
+{"query": "请问如何执行扩容推理运行时", "gold_doc_id": "rb-扩容推理运行时", "hard_negatives": ["rb-清理过期会话数据", "rb-开启 int8 量化推理", "rb-重建向量索引"]}
+{"query": "如何执行扩容推理运行时", "gold_doc_id": "rb-扩容推理运行时", "hard_negatives": ["rb-清理过期会话数据", "rb-开启 int8 量化推理", "rb-重建向量索引"]}
+{"query": "如何执行开启 int8 量化推理", "gold_doc_id": "rb-开启 int8 量化推理", "hard_negatives": ["rb-扩容推理运行时", "rb-重建向量索引", "rb-回滚一次失败发布"]}
+{"query": "如何执行开启 int8 量化推理？", "gold_doc_id": "rb-开启 int8 量化推理", "hard_negatives": ["rb-扩容推理运行时", "rb-重建向量索引", "rb-回滚一次失败发布"]}
+{"query": "请问如何执行开启 int8 量化推理", "gold_doc_id": "rb-开启 int8 量化推理", "hard_negatives": ["rb-扩容推理运行时", "rb-重建向量索引", "rb-回滚一次失败发布"]}
+{"query": "如何执行开启 int8 量化推理", "gold_doc_id": "rb-开启 int8 量化推理", "hard_negatives": ["rb-扩容推理运行时", "rb-重建向量索引", "rb-回滚一次失败发布"]}
+{"query": "清理过期会话数据的具体步骤是什么", "gold_doc_id": "rb-清理过期会话数据", "hard_negatives": ["rb-回滚一次失败发布", "rb-重建向量索引", "rb-开启 int8 量化推理"]}
+{"query": "清理过期会话数据的具体步骤是什么？", "gold_doc_id": "rb-清理过期会话数据", "hard_negatives": ["rb-回滚一次失败发布", "rb-重建向量索引", "rb-开启 int8 量化推理"]}
+{"query": "请问清理过期会话数据的具体步骤是什么", "gold_doc_id": "rb-清理过期会话数据", "hard_negatives": ["rb-回滚一次失败发布", "rb-重建向量索引", "rb-开启 int8 量化推理"]}
+{"query": "清理过期会话数据的具体步骤是什么", "gold_doc_id": "rb-清理过期会话数据", "hard_negatives": ["rb-回滚一次失败发布", "rb-重建向量索引", "rb-开启 int8 量化推理"]}
+{"query": "检索结果里为什么会出现无关片段，应该怎么处理", "gold_doc_id": "faq-检索结果里为什么", "hard_negatives": ["faq-分片太大会有什么", "faq-困惑度下降但答案", "faq-如何判断是否需要"]}
+{"query": "检索结果里为什么会出现无关片段，应该怎么处理？", "gold_doc_id": "faq-检索结果里为什么", "hard_negatives": ["faq-分片太大会有什么", "faq-困惑度下降但答案", "faq-如何判断是否需要"]}
+{"query": "请问检索结果里为什么会出现无关片段，应该怎么处理", "gold_doc_id": "faq-检索结果里为什么", "hard_negatives": ["faq-分片太大会有什么", "faq-困惑度下降但答案", "faq-如何判断是否需要"]}
+{"query": "检索结果里为什么会出现无关片段 并且 应该怎么处理", "gold_doc_id": "faq-检索结果里为什么", "hard_negatives": ["faq-分片太大会有什么", "faq-困惑度下降但答案", "faq-如何判断是否需要"]}
+{"query": "为什么开启重排之后效果反而变差，应该怎么处理", "gold_doc_id": "faq-为什么开启重排之", "hard_negatives": ["faq-CPU 上小模型", "faq-如何判断是否需要", "faq-评估指标忽高忽低"]}
+{"query": "为什么开启重排之后效果反而变差，应该怎么处理？", "gold_doc_id": "faq-为什么开启重排之", "hard_negatives": ["faq-CPU 上小模型", "faq-如何判断是否需要", "faq-评估指标忽高忽低"]}
+{"query": "请问为什么开启重排之后效果反而变差，应该怎么处理", "gold_doc_id": "faq-为什么开启重排之", "hard_negatives": ["faq-CPU 上小模型", "faq-如何判断是否需要", "faq-评估指标忽高忽低"]}
+{"query": "为什么开启重排之后效果反而变差 并且 应该怎么处理", "gold_doc_id": "faq-为什么开启重排之", "hard_negatives": ["faq-CPU 上小模型", "faq-如何判断是否需要", "faq-评估指标忽高忽低"]}
+{"query": "CPU 上小模型为什么线程越多越慢", "gold_doc_id": "faq-CPU 上小模型", "hard_negatives": ["faq-为什么开启重排之", "faq-评估指标忽高忽低", "faq-分片太大会有什么"]}
+{"query": "CPU 上小模型为什么线程越多越慢？", "gold_doc_id": "faq-CPU 上小模型", "hard_negatives": ["faq-为什么开启重排之", "faq-评估指标忽高忽低", "faq-分片太大会有什么"]}
+{"query": "请问CPU 上小模型为什么线程越多越慢", "gold_doc_id": "faq-CPU 上小模型", "hard_negatives": ["faq-为什么开启重排之", "faq-评估指标忽高忽低", "faq-分片太大会有什么"]}
+{"query": "CPU 上小模型为什么线程越多越慢", "gold_doc_id": "faq-CPU 上小模型", "hard_negatives": ["faq-为什么开启重排之", "faq-评估指标忽高忽低", "faq-分片太大会有什么"]}
+{"query": "向量检索和关键词检索该用哪个", "gold_doc_id": "faq-向量检索和关键词", "hard_negatives": ["faq-如何判断是否需要", "faq-检索结果里为什么", "faq-评估指标忽高忽低"]}
+{"query": "向量检索和关键词检索该用哪个？", "gold_doc_id": "faq-向量检索和关键词", "hard_negatives": ["faq-如何判断是否需要", "faq-检索结果里为什么", "faq-评估指标忽高忽低"]}
+{"query": "请问向量检索和关键词检索该用哪个", "gold_doc_id": "faq-向量检索和关键词", "hard_negatives": ["faq-如何判断是否需要", "faq-检索结果里为什么", "faq-评估指标忽高忽低"]}
+{"query": "向量检索和关键词检索该用哪个", "gold_doc_id": "faq-向量检索和关键词", "hard_negatives": ["faq-如何判断是否需要", "faq-检索结果里为什么", "faq-评估指标忽高忽低"]}
+{"query": "困惑度下降但答案质量没变好", "gold_doc_id": "faq-困惑度下降但答案", "hard_negatives": ["faq-评估指标忽高忽低", "faq-为什么开启重排之", "faq-CPU 上小模型"]}
+{"query": "困惑度下降但答案质量没变好？", "gold_doc_id": "faq-困惑度下降但答案", "hard_negatives": ["faq-评估指标忽高忽低", "faq-为什么开启重排之", "faq-CPU 上小模型"]}
+{"query": "请问困惑度下降但答案质量没变好", "gold_doc_id": "faq-困惑度下降但答案", "hard_negatives": ["faq-评估指标忽高忽低", "faq-为什么开启重排之", "faq-CPU 上小模型"]}
+{"query": "困惑度下降但答案质量没变好", "gold_doc_id": "faq-困惑度下降但答案", "hard_negatives": ["faq-评估指标忽高忽低", "faq-为什么开启重排之", "faq-CPU 上小模型"]}
+{"query": "分片太大会有什么后果", "gold_doc_id": "faq-分片太大会有什么", "hard_negatives": ["faq-CPU 上小模型", "faq-如何判断是否需要", "faq-向量检索和关键词"]}
+{"query": "分片太大会有什么后果？", "gold_doc_id": "faq-分片太大会有什么", "hard_negatives": ["faq-CPU 上小模型", "faq-如何判断是否需要", "faq-向量检索和关键词"]}
+{"query": "请问分片太大会有什么后果", "gold_doc_id": "faq-分片太大会有什么", "hard_negatives": ["faq-CPU 上小模型", "faq-如何判断是否需要", "faq-向量检索和关键词"]}
+{"query": "分片太大会有什么后果", "gold_doc_id": "faq-分片太大会有什么", "hard_negatives": ["faq-CPU 上小模型", "faq-如何判断是否需要", "faq-向量检索和关键词"]}
+{"query": "如何判断是否需要重排，应该怎么处理", "gold_doc_id": "faq-如何判断是否需要", "hard_negatives": ["faq-向量检索和关键词", "faq-困惑度下降但答案", "faq-检索结果里为什么"]}
+{"query": "如何判断是否需要重排，应该怎么处理？", "gold_doc_id": "faq-如何判断是否需要", "hard_negatives": ["faq-向量检索和关键词", "faq-困惑度下降但答案", "faq-检索结果里为什么"]}
+{"query": "请问如何判断是否需要重排，应该怎么处理", "gold_doc_id": "faq-如何判断是否需要", "hard_negatives": ["faq-向量检索和关键词", "faq-困惑度下降但答案", "faq-检索结果里为什么"]}
+{"query": "如何判断是否需要重排 并且 应该怎么处理", "gold_doc_id": "faq-如何判断是否需要", "hard_negatives": ["faq-向量检索和关键词", "faq-困惑度下降但答案", "faq-检索结果里为什么"]}
+{"query": "评估指标忽高忽低是什么原因", "gold_doc_id": "faq-评估指标忽高忽低", "hard_negatives": ["faq-CPU 上小模型", "faq-为什么开启重排之", "faq-困惑度下降但答案"]}
+{"query": "评估指标忽高忽低是什么原因？", "gold_doc_id": "faq-评估指标忽高忽低", "hard_negatives": ["faq-CPU 上小模型", "faq-为什么开启重排之", "faq-困惑度下降但答案"]}
+{"query": "请问评估指标忽高忽低是什么原因", "gold_doc_id": "faq-评估指标忽高忽低", "hard_negatives": ["faq-CPU 上小模型", "faq-为什么开启重排之", "faq-困惑度下降但答案"]}
+{"query": "评估指标忽高忽低是什么原因", "gold_doc_id": "faq-评估指标忽高忽低", "hard_negatives": ["faq-CPU 上小模型", "faq-为什么开启重排之", "faq-困惑度下降但答案"]}
