@@ -16,7 +16,7 @@ RUN PYTHONPATH=src/py OPENBLAS_NUM_THREADS=2 python -m hyperion.train --out asse
 # 产物在 /app/assets
 
 # ---------- 阶段 2：运行时（Node，零运行期依赖） ----------
-FROM node:22-slim AS runtime
+FROM node:25-slim AS runtime
 WORKDIR /app
 ENV NODE_ENV=production PORT=8787 HOST=0.0.0.0
 COPY package.json tsconfig.json ./
