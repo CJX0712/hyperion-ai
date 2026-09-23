@@ -81,11 +81,11 @@ def main() -> int:
     avg = float(np.mean(losses))
     print(f"\n[最终权重 LM loss] {avg:.5f}  ppl {np.exp(min(avg, 20)):.3f}")
     if avg < 1.0:
-        print("[诊断] ✅ LM 能力已保留：联合多任务阶段的 LM 回放生效，生成退化应已修复。")
+        print("[诊断] [OK] LM 能力已保留：联合多任务阶段的 LM 回放生效，生成退化应已修复。")
     elif avg < 2.0:
-        print("[诊断] ⚠️ LM loss 偏高：联合阶段 LM 回放不足，建议上调 --joint-steps 或 --joint-lm-ratio。")
+        print("[诊断] [WARN] LM loss 偏高：联合阶段 LM 回放不足，建议上调 --joint-steps 或 --joint-lm-ratio。")
     else:
-        print("[诊断] ❌ 灾难性遗忘仍在：LM loss 远超阶段末 (~0.08)，需大幅加强联合阶段 LM 占比。")
+        print("[诊断] [FAIL] 灾难性遗忘仍在：LM loss 远超阶段末 (~0.08)，需大幅加强联合阶段 LM 占比。")
 
     # ---------- 2) greedy 生成 ----------
     prompts = [
