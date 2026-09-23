@@ -18,7 +18,7 @@
     "train": "node scripts/train.mjs"
   },
   "devDependencies": {
-    "@types/node": "22.18.8",
+    "@types/node": "26.6.2",
     "typescript": "5.9.3"
   }
 }
