@@ -3,8 +3,9 @@ name: publish-ghcr
 # Build a multi-arch image and publish it to GitHub Container Registry
 # (ghcr.io), then smoke-run it.
 #
-# v2: QEMU + linux/amd64 + linux/arm64, semver tags, GHA layer cache,
-#     guaranteed smoke-test cleanup.
+# v3: 默认只构建 linux/amd64（arm64 走 workflow_dispatch 手动指定），semver tags,
+#     GHA layer cache, guaranteed smoke-test cleanup, 45min 超时保护,
+#     paths-ignore 跳过纯文档改动。
 #
 # Author: 晨星
 
@@ -12,12 +13,19 @@ on:
   push:
     branches: [main]
     tags: ["v*"]
+    paths-ignore:
+      - "**/*.md"
+      - "docs/**"
+      - "LICENSE"
+      - ".gitignore"
+      - ".github/workflows/ci.yml"
+      - ".github/dependabot.yml"
   workflow_dispatch:
     inputs:
       platforms:
         description: "目标平台（逗号分隔）"
         required: false
-        default: "linux/amd64,linux/arm64"
+        default: "linux/amd64"
 
 permissions:
   contents: read
@@ -34,6 +42,7 @@ jobs:
   publish:
     name: build, push, run
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v7
 
@@ -65,7 +74,7 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: .
-          platforms: ${{ github.event.inputs.platforms || 'linux/amd64,linux/arm64' }}
+          platforms: ${{ github.event.inputs.platforms || 'linux/amd64' }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
