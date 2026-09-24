@@ -15,10 +15,12 @@ jobs:
 
       - uses: actions/setup-node@v7
         with:
+          cache: npm
           node-version: 22
 
       - uses: actions/setup-python@v7
         with:
+          cache: pip
           python-version: "3.13"
 
       - name: 安装训练内核依赖
