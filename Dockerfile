@@ -6,7 +6,7 @@
 # 服务：  docker build --target runtime -t hyperion-ai .
 
 # ---------- 阶段 1：训练 ----------
-FROM python:3.13-slim AS train
+FROM python:3.14-slim AS train
 WORKDIR /app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
